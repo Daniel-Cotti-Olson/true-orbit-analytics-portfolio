@@ -30,12 +30,16 @@
         {
           "name": "width",
           "type": "INT",
-          "links": null
+          "links": [
+            19
+          ]
         },
         {
           "name": "height",
           "type": "INT",
-          "links": null
+          "links": [
+            20
+          ]
         },
         {
           "name": "batch_size",
