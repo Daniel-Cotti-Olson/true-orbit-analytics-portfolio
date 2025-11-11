@@ -274,8 +274,6 @@
         "Node name for S&R": "SVD_img2vid_Conditioning"
       },
       "widgets_values": [
-        1024,
-        576,
         6,
         6,
         25,
