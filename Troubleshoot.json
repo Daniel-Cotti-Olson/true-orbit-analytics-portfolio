@@ -1,520 +1,122 @@
 {
-  "id": "d3ca2889-c74d-462a-93f2-3e84d76f10ff",
-  "revision": 0,
-  "last_node_id": 16,
-  "last_link_id": 18,
+  "last_node_id": 11,
+  "last_link_id": 11,
   "nodes": [
     {
-      "id": 4,
-      "type": "EmptyLatentImage",
-      "pos": [
-        400,
-        400
-      ],
-      "size": [
-        315,
-        106
-      ],
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [ 10, 10 ],
+      "size": { "0": 315, "1": 98 },
       "flags": {},
       "order": 0,
       "mode": 0,
-      "inputs": [],
       "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            8
-          ]
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [
-            19
-          ]
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [
-            20
-          ]
-        },
-        {
-          "name": "batch_size",
-          "type": "INT",
-          "links": null
-        }
+        { "name": "MODEL", "type": "MODEL", "links": [ 4 ] },
+        { "name": "CLIP", "type": "CLIP", "links": null },
+        { "name": "VAE", "type": "VAE", "links": [ 5 ] }
       ],
-      "properties": {
-        "Node name for S&R": "EmptyLatentImage"
-      },
-      "widgets_values": [
-        1024,
-        576,
-        1
-      ]
+      "properties": { "Node name for S&R": "CheckpointLoaderSimple", "ver": "unknown" },
+      "widgets_values": [ "svd_xt.safetensors" ]
     },
     {
-      "id": 12,
+      "id": 2,
       "type": "LoadImage",
-      "pos": [
-        -7.465501427497664,
-        200.7327866068574
-      ],
-      "size": [
-        274,
-        314
-      ],
+      "pos": [ 10, 200 ],
+      "size": { "0": 315, "1": 315 },
       "flags": {},
       "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            17
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
+        { "name": "IMAGE", "type": "IMAGE", "links": [ 3 ] }
       ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "Undertaker.png",
-        "image"
-      ]
-    },
-    {
-      "id": 15,
-      "type": "VAEDecode",
-      "pos": [
-        1011.0743822118461,
-        -78.78146477934918
-      ],
-      "size": [
-        140,
-        46
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 13
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 15
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            14
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 1,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        155.4545454545454,
-        -104.87603305785117
-      ],
-      "size": [
-        315,
-        98
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            4
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": null
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            15,
-            18
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "svd_xt.safetensors"
-      ]
-    },
-    {
-      "id": 16,
-      "type": "CLIPVisionLoader",
-      "pos": [
-        157.35537394738367,
-        49.31770877436968
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP_VISION",
-          "type": "CLIP_VISION",
-          "links": [
-            16
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPVisionLoader"
-      },
-      "widgets_values": [
-        "clip_vit_large_patch14.safetensors"
-      ]
+      "properties": { "Node name for S&R": "LoadImage", "ver": "unknown" },
+      "widgets_values": [ "test_image.png" ]
     },
     {
       "id": 3,
       "type": "SVD_img2vid_Conditioning",
-      "pos": [
-        493.7933884297514,
-        66.86776859504141
-      ],
-      "size": [
-        315,
-        238
-      ],
+      "pos": [ 400, 200 ],
+      "size": { "0": 315, "1": 126 },
       "flags": {},
-      "order": 4,
+      "order": 2,
       "mode": 0,
       "inputs": [
-        {
-          "name": "clip_vision",
-          "type": "CLIP_VISION",
-          "link": 16
-        },
-        {
-          "name": "init_image",
-          "type": "IMAGE",
-          "link": 17
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 18
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 19
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 20
-        }
+        { "name": "image", "type": "IMAGE", "link": 3 }
       ],
       "outputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            6
-          ]
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "links": [
-            7
-          ]
-        },
-        {
-          "name": "latent",
-          "type": "LATENT",
-          "links": null
-        }
+        { "name": "positive", "type": "CONDITIONING", "links": [ 6 ] },
+        { "name": "negative", "type": "CONDITIONING", "links": [ 7 ] }
       ],
-      "properties": {
-        "Node name for S&R": "SVD_img2vid_Conditioning"
-      },
-      "widgets_values": [
-        6,
-        6,
-        25,
-        1
-      ]
+      "properties": { "Node name for S&R": "SVD_img2vid_Conditioning", "ver": "unknown" },
+      "widgets_values": [ 1024, 576, 6, 6, 25, 1 ]
     },
     {
-      "id": 13,
-      "type": "VHS_VideoCombine",
-      "pos": [
-        1313.1187960931632,
-        -27.220932401407133
-      ],
-      "size": [
-        215.60000610351562,
-        238
-      ],
+      "id": 4,
+      "type": "EmptyLatentImage",
+      "pos": [ 400, 400 ],
+      "size": { "0": 315, "1": 106 },
       "flags": {},
-      "order": 7,
+      "order": 3,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 14
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": null
-        },
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        }
-      ],
       "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
+        { "name": "LATENT", "type": "LATENT", "links": [ 8 ] }
       ],
-      "properties": {
-        "Node name for S&R": "VHS_VideoCombine"
-      },
-      "widgets_values": {
-        "frame_rate": 8,
-        "loop_count": 0,
-        "filename_prefix": "AnimateDiff",
-        "format": "image/gif",
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
-      }
+      "properties": { "Node name for S&R": "EmptyLatentImage", "ver": "unknown" },
+      "widgets_values": [ 1024, 576, 1, 25 ]
     },
     {
       "id": 5,
       "type": "KSampler",
-      "pos": [
-        874.9917355371898,
-        118.15702479338819
+      "pos": [ 800, 10 ],
+      "size": { "0": 315, "1": 262 },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        { "name": "model", "type": "MODEL", "link": 4 },
+        { "name": "positive", "type": "CONDITIONING", "link": 6 },
+        { "name": "negative", "type": "CONDITIONING", "link": 7 },
+        { "name": "latent_image", "type": "LATENT", "link": 8 }
       ],
-      "size": [
-        315,
-        262
+      "outputs": [
+        { "name": "LATENT", "type": "LATENT", "links": [ 9 ] }
       ],
+      "properties": { "Node name for S&R": "KSampler", "ver": "unknown" },
+      "widgets_values": [ 123, "randomize", 20, 8, "euler", "normal", 1 ]
+    },
+    {
+      "id": 6,
+      "type": "VideoCombine",
+      "pos": [ 1200, 10 ],
+      "size": { "0": 315, "1": 106 },
       "flags": {},
       "order": 5,
       "mode": 0,
       "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 4
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 6
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 7
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 8
-        }
+        { "name": "frames", "type": "IMAGE", "link": 9 },
+        { "name": "frame_rate", "type": "INT", "link": null, "widget": { "name": "frame_rate" } },
+        { "name": "loop_count", "type": "INT", "link": null, "widget": { "name": "loop_count" } },
+        { "name": "filename_prefix", "type": "STRING", "link": null, "widget": { "name": "filename_prefix" } },
+        { "name": "format", "type": "STRING", "link": null, "widget": { "name": "format" } },
+        { "name": "pingpong", "type": "BOOLEAN", "link": null, "widget": { "name": "pingpong" } },
+        { "name": "save_output", "type": "BOOLEAN", "link": null, "widget": { "name": "save_output" } }
       ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            13
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        458260080303022,
-        "randomize",
-        20,
-        8,
-        "euler",
-        "normal",
-        1
-      ]
+      "properties": { "Node name for S&R": "VideoCombine", "ver": "unknown" },
+      "widgets_values": [ 8, 0, "ComfyUI", "video/webm", false, true ]
     }
   ],
   "links": [
-    [
-      4,
-      1,
-      0,
-      5,
-      0,
-      "MODEL"
-    ],
-    [
-      6,
-      3,
-      0,
-      5,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      7,
-      3,
-      1,
-      5,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      8,
-      4,
-      0,
-      5,
-      3,
-      "LATENT"
-    ],
-    [
-      13,
-      5,
-      0,
-      15,
-      0,
-      "LATENT"
-    ],
-    [
-      14,
-      15,
-      0,
-      13,
-      0,
-      "IMAGE"
-    ],
-    [
-      15,
-      1,
-      2,
-      15,
-      1,
-      "VAE"
-    ],
-    [
-      16,
-      16,
-      0,
-      3,
-      0,
-      "CLIP_VISION"
-    ],
-    [
-      17,
-      12,
-      0,
-      3,
-      1,
-      "IMAGE"
-    ],
-    [
-      18,
-      1,
-      2,
-      3,
-      2,
-      "VAE"
-    ],
-    [
-      19,
-      4,
-      1,
-      3,
-      3,
-      "INT"
-    ],
-    [
-      20,
-      4,
-      2,
-      3,
-      4,
-      "INT"
-    ]
+    [ 3, 2, 0, 3, 0, "IMAGE" ],
+    [ 4, 1, 0, 5, 0, "MODEL" ],
+    [ 5, 1, 2, 6, 1, "VAE" ],
+    [ 6, 3, 0, 5, 1, "CONDITIONING" ],
+    [ 7, 3, 1, 5, 2, "CONDITIONING" ],
+    [ 8, 4, 0, 5, 3, "LATENT" ],
+    [ 9, 5, 0, 6, 0, "IMAGE" ]
   ],
   "groups": [],
   "config": {},
-  "extra": {
-    "ds": {
-      "scale": 1,
-      "offset": [
-        133.71983266418738,
-        219.31369618430824
-      ]
-    },
-    "frontendVersion": "1.28.8",
-    "VHS_latentpreview": false,
-    "VHS_latentpreviewrate": 0,
-    "VHS_MetadataImage": true,
-    "VHS_KeepIntermediate": true
-  },
+  "extra": {},
   "version": 0.4
 }
