@@ -24,7 +24,6 @@ header {
     justify-content: center; /* Center the logo */
     align-items: center;
     padding: 0.5rem 2rem; /* Adjust padding */
-    position: relative; /* Needed for absolute positioning of the nav */
 }
 
 nav {
