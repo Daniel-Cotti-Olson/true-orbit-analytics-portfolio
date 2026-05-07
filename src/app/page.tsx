@@ -37,6 +37,7 @@ const services = [
 
 export default function Home() {
   const [hoveredContact, setHoveredContact] = useState<boolean>(false);
+const [submitted, setSubmitted] = useState<boolean>(false);
 
   return (
     <>
