@@ -97,7 +97,7 @@ export default function Home() {
         </div>
 
         {/* Hero Section */}
-        <section className="relative pt-24 pb-32 px-8 overflow-hidden">
+        <section className="relative pt-24 pb-32 px-8 overflow-hidden" style={{backgroundColor: "#1e1b4b"}}>
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
           
           <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center">
@@ -140,7 +140,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="w-full py-40 px-8 relative">
+        <section id="services" className="w-full py-40 px-8 relative" style={{backgroundColor: "#1e1b4b"}}>
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col items-center text-center mb-24">
               <h2 className="text-4xl md:text-7xl font-black mb-8 tracking-tighter uppercase">
@@ -159,7 +159,7 @@ export default function Home() {
         </section>
 
         {/* Portfolio Section */}
-        <section id="portfolio" className="w-full py-40 px-8 relative overflow-hidden bg-white/[0.02]">
+        <section id="portfolio" className="w-full py-40 px-8 relative overflow-hidden" style={{backgroundColor: "#1a1840"}}>
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               <motion.div 
@@ -234,7 +234,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="w-full py-40 px-8 relative overflow-hidden bg-white/[0.01]">
+        <section id="contact" className="w-full py-40 px-8 relative overflow-hidden" style={{backgroundColor: "#1e1b4b"}}>
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 relative z-10">
             <div>
               <h2 className="text-5xl md:text-8xl font-black mb-10 tracking-tighter uppercase leading-[0.85]">
