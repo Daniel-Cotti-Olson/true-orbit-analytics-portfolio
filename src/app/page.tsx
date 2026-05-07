@@ -1,43 +1,71 @@
 "use client";
 
 import { 
+  ShieldCheck, 
   TrendingUp, 
   Search, 
-  Target,
-  MailOpen,
+  MailOpen, 
+  PhoneCall, 
   ArrowRight,
-  ShieldCheck,
-  BarChart2
+  Sparkles,
+  Target
 } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
+import PricingCard from "@/components/PricingCard";
 
 const services = [
   {
-    title: "Sales Trend Snapshot",
-    description: "A meticulous analysis of your sales data to identify overall trends and key performance indicators (KPIs). Perfect for a high-level health check of your business.",
+    title: "Full-Cycle Bookkeeping",
+    description: "Meticulous recording of all financial transactions, ensuring your ledgers are always accurate and up-to-date.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Financial Strategy",
+    description: "Deep-dive analysis and cash flow forecasting to help you make informed decisions for future growth.",
     icon: TrendingUp,
-    deliverable: "1-page PDF report with key metrics and visualization"
   },
   {
-    title: "Deep Dive Insights",
-    description: "An in-depth analysis including product performance and customer segmentation to identify strategic growth opportunities.",
+    title: "Tax Readiness",
+    description: "Organization of financial records to ensure a seamless tax season with maximum eligible deductions.",
     icon: Search,
-    deliverable: "3-5 page detailed analysis with actionable insights"
+  },
+];
+
+const plans = [
+  {
+    name: "Core Orbit",
+    price: "$299",
+    description: "Essential monthly bookkeeping for solopreneurs.",
+    features: ["Monthly Bank Reconciliation", "Financial Statements", "Email Support", "Tax Ready Records"],
+    cta: "Start with Core",
+    popular: false,
   },
   {
-    title: "Strategic Growth Plan",
-    description: "A comprehensive financial analysis with a forward-looking strategic plan to help you make elite, long-term decisions.",
-    icon: Target,
-    deliverable: "5-10 page report, advanced metrics, and a strategy session"
+    name: "Professional Clarity",
+    price: "$599",
+    description: "Weekly updates and strategy for growing businesses.",
+    features: ["Weekly Bookkeeping", "Accounts Payable/Receivable", "Monthly Strategy Call", "Priority Support"],
+    cta: "Go Professional",
+    popular: true,
+  },
+  {
+    name: "Elite Advisory",
+    price: "$1,200+",
+    description: "Full financial controller and forecasting services.",
+    features: ["Daily Transaction Entry", "Cash Flow Forecasting", "Budgeting vs. Actuals", "Unlimited Consultations"],
+    cta: "Inquire for Elite",
+    popular: false,
   },
 ];
 
 const contactItems = [
-  { icon: MailOpen, label: "Email Us", value: "contact@trueorbitanalytics.com", href: "mailto:contact@trueorbitanalytics.com" },
+  { icon: MailOpen, label: "Email Us", value: "info@trueorbitbookkeeing.com", href: "mailto:info@trueorbitbookkeeing.com" },
+  { icon: PhoneCall, label: "Call Us", value: "(503) 313-9953", href: "tel:5033139953" },
 ];
 
 export default function Home() {
@@ -57,7 +85,7 @@ export default function Home() {
     if (result.success) {
       setSubmitted(true);
     } else {
-      alert("Something went wrong. Please email us directly at contact@trueorbitanalytics.com.");
+      alert("Something went wrong. Please call us directly at (503) 313-9953.");
     }
   };
 
@@ -77,8 +105,8 @@ export default function Home() {
           paddingBottom: "1.5rem",
         }}>
           <img
-            src="/logo.svg"
-            alt="True Orbit Analytics Logo"
+            src="/logo-no-bg.svg"
+            alt="True Orbit Logo"
             style={{width: "100%", maxWidth: "700px", padding: "1.5rem"}}
           />
           <div style={{
@@ -92,12 +120,12 @@ export default function Home() {
             borderRadius: "9999px",
             backgroundColor: "rgba(212,175,55,0.1)",
           }}>
-            Elite Data Management & Strategic Insights
+            Elite Financial Management
           </div>
         </div>
 
         {/* Hero Section */}
-        <section className="relative pt-24 pb-32 px-8 overflow-hidden" style={{backgroundColor: "#1e1b4b"}}>
+        <section className="relative pt-24 pb-32 px-8 overflow-hidden">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
           
           <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center">
@@ -105,10 +133,10 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-6xl md:text-9xl font-black mb-10 leading-[0.9] tracking-tighter uppercase"
+              className="text-6xl md:text-9xl font-black mb-10 leading-[0.9] tracking-tighter"
             >
-              Transform Your Data <br />
-              <span className="gold-gradient">Into Decisions</span>
+              Your Trusted Partner in <br />
+              <span className="gold-gradient">Financial Clarity</span>
             </motion.h1>
             
             <motion.p 
@@ -117,38 +145,21 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-white/60 mb-14 max-w-3xl mx-auto leading-relaxed font-medium"
             >
-              Professional data analysis and strategic reporting to solve your most complex business challenges with precision and clarity.
+              High-end bookkeeping and strategic financial advisory designed specifically for ambitious small businesses and solopreneurs who demand excellence.
             </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="w-full max-w-4xl aspect-video rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl relative"
-            >
-              <iframe 
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/1ASpWpeZJMA?si=N9TVM2Qjh3JX9Q8V&amp;controls=0" 
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
-                allowFullScreen
-              ></iframe>
-            </motion.div>
           </div>
         </section>
 
         {/* Services Section */}
-        <section id="services" className="w-full py-40 px-8 relative" style={{backgroundColor: "#1e1b4b"}}>
+        <section id="services" className="w-full py-40 px-8 relative">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col items-center text-center mb-24">
               <h2 className="text-4xl md:text-7xl font-black mb-8 tracking-tighter uppercase">
-                Expert Data <br />
+                Expert Financial <br />
                 <span className="gold-gradient">Services</span>
               </h2>
               <div className="w-24 h-1.5 bg-gold rounded-full mb-8"></div>
-              <p className="text-white/60 text-xl max-w-2xl font-medium">We provide the technical foundation your business needs to scale with confidence through data-backed intelligence.</p>
+              <p className="text-white/60 text-xl max-w-2xl font-medium">We provide the technical foundation your business needs to scale with confidence.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-10">
               {services.map((service, index) => (
@@ -158,8 +169,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Portfolio Section */}
-        <section id="portfolio" className="w-full py-40 px-8 relative overflow-hidden" style={{backgroundColor: "#1a1840"}}>
+        {/* About Section */}
+        <section id="about" className="w-full py-40 px-8 relative overflow-hidden bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               <motion.div 
@@ -176,10 +187,12 @@ export default function Home() {
                   transition={{ duration: 1 }}
                   className="relative z-30 rounded-[2rem] overflow-hidden border border-white/10 w-full max-w-[400px] aspect-[4/5] shadow-2xl bg-white/5"
                 >
-                  <img 
-                    src="/Sales_Analysis_Report.png" 
-                    alt="Sales Analysis Report Preview" 
-                    className="w-full h-full object-cover"
+                  <Image 
+                    src="/Daniel4.jpg" 
+                    alt="Daniel - True Orbit Bookkeeping" 
+                    fill
+                    priority
+                    className="object-cover"
                   />
                 </motion.div>
                 <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-gold/20 blur-[100px] rounded-full z-10"></div>
@@ -194,20 +207,17 @@ export default function Home() {
                 className="relative z-10"
               >
                 <h2 className="text-5xl md:text-8xl font-black mb-10 leading-[0.9] tracking-tighter uppercase">
-                  Elite <br />
-                  <span className="gold-gradient">Case Study</span>
+                  Elevating Business <br />
+                  <span className="gold-gradient">Through Precision</span>
                 </h2>
-                <h3 className="text-3xl font-black mb-6 text-white uppercase tracking-tight">Project "Clarity"</h3>
                 <p className="text-white/60 text-xl md:text-2xl mb-16 leading-relaxed font-medium">
-                  <strong>The Challenge:</strong> A growing enterprise was "drowning in data," with thousands of sales records but no way to interpret weekly performance. <br /><br />
-                  <strong>Our Solution:</strong> We performed a comprehensive deep-dive analysis, identifying hidden patterns and seasonal trends to generate executive intelligence reports. <br /><br />
-                  <strong>The Result:</strong> Actionable intelligence delivered every Monday morning, enabling rapid decisions on inventory and strategy.
+                  True Orbit Bookkeeping was founded on a simple principle: small businesses deserve big-firm financial expertise. We don't just record numbers; we interpret them.
                 </p>
-
-                <div className="grid sm:grid-cols-2 gap-8 text-left mb-16">
+                
+                <div className="grid sm:grid-cols-2 gap-8 text-left">
                   {[
-                    { icon: Target, title: "Data Driven", text: "Every recommendation backed by evidence." },
-                    { icon: ShieldCheck, title: "Confidential", text: "Your business data stays protected." },
+                    { icon: Target, title: "Mission Driven", text: "Empowering owners to focus on their craft." },
+                    { icon: ShieldCheck, title: "Uncompromising Integrity", text: "Your financial security is our top priority." },
                   ].map((item, i) => (
                     <div key={i} className="flex gap-6 items-start group p-6 rounded-[2rem] bg-white/5 border border-white/10">
                       <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-gold group-hover:text-indigo-950 transition-all duration-500">
@@ -220,26 +230,36 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                
-                <a 
-                  href="/Sales_Analysis_Report.pdf" 
-                  target="_blank"
-                  className="inline-flex items-center gap-4 bg-gold text-indigo-950 px-10 py-5 rounded-2xl font-black text-lg hover:bg-gold-light hover:shadow-[0_0_50px_rgba(212,175,55,0.3)] transition-all uppercase tracking-widest"
-                >
-                  View Full Report <ArrowRight size={20} />
-                </a>
               </motion.div>
             </div>
           </div>
         </section>
 
+        {/* Pricing Section */}
+        <section id="pricing" className="w-full py-40 px-8 relative">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-32">
+              <h2 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter uppercase">
+                Transparent <br />
+                <span className="gold-gradient">Pricing</span>
+              </h2>
+              <p className="text-white/60 text-xl max-w-2xl mx-auto font-medium">Investment in clarity. Select the orbit that matches your business trajectory.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-12">
+              {plans.map((plan, index) => (
+                <PricingCard key={index} {...plan} index={index} />
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
-        <section id="contact" className="w-full py-40 px-8 relative overflow-hidden" style={{backgroundColor: "#1e1b4b"}}>
+        <section id="contact" className="w-full py-40 px-8 relative overflow-hidden bg-white/[0.01]">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 relative z-10">
             <div>
               <h2 className="text-5xl md:text-8xl font-black mb-10 tracking-tighter uppercase leading-[0.85]">
                 Secure Your <br />
-                <span className="gold-gradient">Data Strategy</span>
+                <span className="gold-gradient">Financial Future</span>
               </h2>
               <p className="text-white/60 text-2xl mb-16 leading-relaxed font-medium">
                 Ready to orbit your business to new heights? Contact us today for a free initial consultation and discovery call.
@@ -307,9 +327,9 @@ export default function Home() {
             
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full py-20 text-center">
-                <div className="text-gold text-6xl mb-6">✓</div>
-                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tight">Intelligence Received</h3>
-                <p className="text-white/60 text-xl">We'll be in touch shortly to discuss your data strategy.</p>
+                <div className="text-yellow-400 text-6xl mb-6">✓</div>
+                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tight">Message Received</h3>
+                <p className="text-white/60 text-xl">We'll be in touch shortly.</p>
               </div>
             ) : (
               <motion.form
@@ -322,24 +342,24 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-10">
                   <div className="space-y-4">
                     <label className="text-xs font-black text-white/30 uppercase tracking-[0.3em] ml-1">First Name</label>
-                    <input type="text" name="firstName" required className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 focus:border-gold outline-none transition-all text-white text-lg font-medium" />
+                    <input type="text" name="firstName" className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 focus:border-gold outline-none transition-all text-white text-lg font-medium" />
                   </div>
                   <div className="space-y-4">
                     <label className="text-xs font-black text-white/30 uppercase tracking-[0.3em] ml-1">Last Name</label>
-                    <input type="text" name="lastName" required className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 focus:border-gold outline-none transition-all text-white text-lg font-medium" />
+                    <input type="text" name="lastName" className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 focus:border-gold outline-none transition-all text-white text-lg font-medium" />
                   </div>
                 </div>
                 <div className="space-y-4">
                   <label className="text-xs font-black text-white/30 uppercase tracking-[0.3em] ml-1">Business Email</label>
-                  <input type="email" name="email" required className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 focus:border-gold outline-none transition-all text-white text-lg font-medium" />
+                  <input type="email" name="email" className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 focus:border-gold outline-none transition-all text-white text-lg font-medium" />
                 </div>
                 <div className="space-y-4">
                   <label className="text-xs font-black text-white/30 uppercase tracking-[0.3em] ml-1">Service Interest</label>
                   <select name="service" className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 focus:border-gold outline-none transition-all text-white/40 text-lg font-medium appearance-none">
                     <option>Select a Service</option>
-                    <option>Sales Trend Snapshot</option>
-                    <option>Deep Dive Insights</option>
-                    <option>Strategic Growth Plan</option>
+                    <option>Core Orbit</option>
+                    <option>Professional Clarity</option>
+                    <option>Elite Advisory</option>
                   </select>
                 </div>
                 <div className="space-y-4">
@@ -364,4 +384,3 @@ export default function Home() {
     </>
   );
 }
-
