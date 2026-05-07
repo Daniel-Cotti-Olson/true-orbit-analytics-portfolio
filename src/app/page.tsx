@@ -91,8 +91,7 @@ export default function Home() {
         </div>
         {/* Hero Section */}
         <section className="relative pt-24 pb-32 px-8 overflow-hidden">
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-          
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>     
           <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
@@ -126,7 +125,7 @@ export default function Home() {
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerPolicy="strict-origin-when-cross-origin" 
-                allowFullScreen
+                allowFullScreen={true}
               ></iframe>
             </motion.div>
           </div>
