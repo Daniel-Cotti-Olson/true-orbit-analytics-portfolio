@@ -1,10 +1,23 @@
 # Directory Overview
 
-This directory is a workspace for setting up a generative AI environment for high-quality image and video production on Ubuntu Linux. The primary tool for this project is ComfyUI, chosen for its modularity and power in creating complex generative AI workflows.
+This directory is the primary workspace for **True Orbit Analytics**, an elite data intelligence and strategic reporting service. It also continues to serve as a generative AI environment (ComfyUI) for high-quality production.
 
-The project is under version control with Git, and the directory contains history from the `aider` AI assistant tool, which was previously used to assist with the setup.
+## Projects
+
+### True Orbit Analytics
+*   **Tech Stack:** Next.js (TypeScript), Tailwind CSS, Framer Motion.
+*   **Design System:** Indigo and Gold aesthetic.
+    *   **Background:** Indigo radial gradient (`#1e1b4b` to `#0f0c29`).
+    *   **Logo Banner:** Deep Indigo (`#1e1b4b`) centered banner.
+    *   **Headlines:** Full gold-gradient text.
+*   **Service Focus:** Data Intelligence & Strategic Reporting.
+*   **Hosting:** GitHub repository (`true-orbit-analytics-portfolio`) pushed to the `master` branch, prepared for Cloudflare Pages deployment.
+
+### Generative AI & ComfyUI
+The primary tool for production, chosen for its modularity and power.
 
 ## Key Files
+...
 
 *   `.gitignore`: This file is configured to exclude `aider`'s cache and history files from the Git repository.
 *   `.aider.chat.history.md`: Contains a detailed log of the user's previous conversations with the `aider` assistant. This log documents the initial project goals, system analysis, and setup steps taken so far.
