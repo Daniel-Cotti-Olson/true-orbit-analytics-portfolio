@@ -1,5 +1,4 @@
 "use client";
-
 import { 
   TrendingUp, 
   Search, 
@@ -13,7 +12,6 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
-
 const services = [
   {
     title: "Sales Trend Snapshot",
@@ -38,7 +36,6 @@ const services = [
 const contactItems = [
   { icon: MailOpen, label: "Email Us", value: "contact@trueorbitanalytics.com", href: "mailto:contact@trueorbitanalytics.com" },
 ];
-
 export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [hoveredContact, setHoveredContact] = useState<number | null>(null);
@@ -59,12 +56,10 @@ export default function Home() {
       alert("Something went wrong. Please email us directly at contact@trueorbitanalytics.com.");
     }
   };
-
   return (
     <>
       <Navbar />
       <main className="min-h-screen bg-indigo-luxury text-white selection:bg-gold selection:text-indigo-950" style={{paddingTop: "60px"}}>
-
         {/* Logo Banner */}
         <div style={{
           width: "100%",
@@ -94,7 +89,6 @@ export default function Home() {
             Elite Data Management & Strategic Insights
           </div>
         </div>
-
         {/* Hero Section */}
         <section className="relative pt-24 pb-32 px-8 overflow-hidden">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
@@ -137,7 +131,6 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section id="services" className="w-full py-40 px-8 relative">
           <div className="max-w-7xl mx-auto">
@@ -156,7 +149,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* Portfolio Section */}
         <section id="portfolio" className="w-full py-40 px-8 relative overflow-hidden bg-white/[0.02]">
           <div className="max-w-7xl mx-auto">
@@ -183,8 +175,7 @@ export default function Home() {
                 </motion.div>
                 <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-gold/20 blur-[100px] rounded-full z-10"></div>
                 <div className="absolute -top-10 -left-10 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full z-10"></div>
-              </motion.div>
-              
+              </motion.div>         
               <motion.div 
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -202,7 +193,6 @@ export default function Home() {
                   <strong>Our Solution:</strong> We performed a comprehensive deep-dive analysis, identifying hidden patterns and seasonal trends to generate executive intelligence reports. <br /><br />
                   <strong>The Result:</strong> Actionable intelligence delivered every Monday morning, enabling rapid decisions on inventory and strategy.
                 </p>
-
                 <div className="grid sm:grid-cols-2 gap-8 text-left mb-16">
                   {[
                     { icon: Target, title: "Data Driven", text: "Every recommendation backed by evidence." },
@@ -218,8 +208,7 @@ export default function Home() {
                       </div>
                     </div>
                   ))}
-                </div>
-                
+                </div>              
                 <a 
                   href="/Sales_Analysis_Report.pdf" 
                   target="_blank"
@@ -231,7 +220,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section id="contact" className="w-full py-40 px-8 relative overflow-hidden bg-white/[0.01]">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 relative z-10">
@@ -242,8 +230,7 @@ export default function Home() {
               </h2>
               <p className="text-white/60 text-2xl mb-16 leading-relaxed font-medium">
                 Ready to orbit your business to new heights? Contact us today for a free initial consultation and discovery call.
-              </p>
-              
+              </p>             
               <div className="space-y-10">
                 {contactItems.map((item, i) => (
                   <div
@@ -357,7 +344,6 @@ export default function Home() {
             )}
           </div>
         </section>
-
         <Footer />
       </main>
     </>
