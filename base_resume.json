@@ -1,0 +1,110 @@
+
+{
+  "contact": {
+    "name": "Daniel Cotti",
+    "location": "Portland, OR",
+    "phone": "(503) 313-9953",
+    "email": "daniel.c.virtual.assistant@gmail.com",
+    "linkedin": "www.linkedin.com/in/daniel-cotti-56b7a7194"
+  },
+  "summary": "Results-driven and motivated professional with a background in client account management, administration, and sales. Proven ability to build rapport, streamline processes, and ensure client satisfaction. Seeking to leverage strong problem-solving skills and a foundation in business operations to drive revenue and contribute to a growth-focused team.",
+  "skills": {
+    "sales_client_relations": [
+      "Client Relationship Management",
+      "Consultative Selling",
+      "Issue Resolution",
+      "Client Onboarding & Retention",
+      "Lead Development",
+      "Active Listening"
+    ],
+    "technical": [
+      "ADP Payroll",
+      "Intuit QuickBooks",
+      "Microsoft Office Suite (Word, Excel)",
+      "Google Workspace",
+      "CRM Software (General Proficiency)",
+      "Social Media & Digital Funnels"
+    ],
+    "operations_administration": [
+      "Financial Statements",
+      "Bank Reconciliation",
+      "Data Entry (65 WPM, 98% Acc.)",
+      "Process Improvement",
+      "Safety Task Analysis (STA)",
+      "Firewatch Protocols"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Administrative & Client Success Specialist",
+      "company": "True Orbit Bookkeeping LLC",
+      "location": "Portland, OR",
+      "dates": "June 2024 - Present",
+      "duties": [
+        "Managed payroll processing and administrative functions for 10+ small business clients, ensuring accuracy and timeliness.",
+        "Served as the primary point of contact for client needs, building trust through clear communication and rapid issue resolution.",
+        "Coordinated client onboarding, ensuring a smooth transition and high levels of satisfaction, contributing to client retention."
+      ]
+    },
+    {
+      "title": "Sales Associate",
+      "company": "Direct Fairways",
+      "location": "Gresham, OR",
+      "dates": "August 2024 – September 2024 (Seasonal)",
+      "duties": [
+        "Developed expertise in customer behavior and market dynamics within a competitive advertising landscape.",
+        "Engaged with prospective customers to identify needs and challenges affecting product reception.",
+        "Gained insight into developing adaptable sales strategies to meet market demands."
+      ]
+    },
+    {
+      "title": "Customer Support & Solutions Agent",
+      "company": "PrideStaff",
+      "location": "Portland, OR",
+      "dates": "November 2023 - July 2024",
+      "duties": [
+        "Ensured high-quality customer interactions through detailed analysis and resolution of inquiries for a high-volume call center.",
+        "Addressed and resolved customer concerns regarding billing, add-on products, and payment processing with a consultative approach.",
+        "Provided constructive feedback to fellow agents to foster a culture of excellence and improve team-wide performance."
+      ]
+    },
+    {
+      "title": "Office Assistant",
+      "company": "Kelly Services (client: Equitable Advisors)",
+      "location": "Portland, OR",
+      "dates": "March 2023 – November 2023",
+      "duties": [
+        "Managed and organized confidential client information, digitizing records to improve retrieval and system integration efficiency.",
+        "Facilitated client transition to new systems by ensuring data accessibility and structural integrity.",
+        "Maintained high standards of accuracy and met tight deadlines using Excel and internal software."
+      ]
+    },
+    {
+      "title": "Cleaning Technician Lead",
+      "company": "Pentagon Technologies",
+      "location": "Hillsboro, OR",
+      "dates": "November 2019 – March 2023",
+      "duties": [
+        "Authored and implemented daily Safety Task Analyses (STAs) to proactively identify and mitigate jobsite hazards, improving team safety.",
+        "Served as designated Firewatch, ensuring strict compliance with fire safety protocols during high-risk operations.",
+        "Progressively took on greater responsibilities, demonstrating leadership and adaptability in a dynamic environment.",
+        "Performed a range of essential site duties including removal of excess concrete, surface sanding for finish quality, and general debris cleanup to maintain a safe and efficient work environment."
+      ]
+    }
+  ],
+  "certifications": [
+    "Intuit Bookkeeping Certification, Intuit Academy",
+    "ADP Payroll Certification, Coursera",
+    "Customer Service Role Preparation, Intuit Academy",
+    "OSHA 30 Certification",
+    "Forklift Certification (Pentagon Technologies)",
+    "Typing: 65 WPM with 98% accuracy",
+    "Excel Basics for Data Analysis"
+  ],
+  "education": {
+    "degree": "High School Diploma",
+    "institution": "Academy with Community Partners",
+    "location": "Portland, OR",
+    "dates": "1998 – 1999"
+  }
+}

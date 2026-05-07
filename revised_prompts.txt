@@ -1,0 +1,83 @@
+---
+A Note on These Prompts:
+
+These prompts are based on a deeper analysis of the current market for fantasy reader merchandise. They are designed to be more targeted and align with proven, successful concepts.
+
+---
+### Pillar: Trope-Driven
+
+---
+**Design 1: The "Morally Grey" Design**
+
+*   **Concept:** A design that plays on the popular "morally grey" character archetype. This could be a stylized, ambiguous character silhouette or a clever text-based design.
+*   **Positive Prompt (Character):**
+    ```
+    minimalist silhouette of a morally grey fantasy character, half light half shadow, mysterious, enigmatic, clean lines, vector art, simple, elegant, black and white, transparent background
+    ```
+*   **Positive Prompt (Text):**
+    ```
+    "Morally Grey Is My Favorite Color" text-based design, elegant fantasy font, clean lines, simple, vector art, black and white, transparent background
+    ```
+*   **Negative Prompt:**
+    ```
+    blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, face, signature, watermark
+    ```
+
+---
+**Design 2: The "Reader" Tarot Card**
+
+*   **Concept:** A design that mimics a tarot card, but with a reader-centric theme. The card would be titled "The Reader" and feature a stylized figure engrossed in a book.
+*   **Positive Prompt:**
+    ```
+    "The Reader" tarot card, minimalist design, stylized figure reading a book, celestial motifs, stars, moon, clean lines, vector art, simple, elegant, black and white, transparent background
+    ```
+*   **Negative Prompt:**
+    ```
+    blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, face, signature, watermark
+    ```
+
+---
+**Design 3: The Illustrative Dragon**
+
+*   **Concept:** A more detailed and artistic dragon design, perhaps in a more illustrative or "woodcut" style. This would be a departure from the ultra-minimalist designs and would appeal to customers looking for a more "epic" feel.
+*   **Positive Prompt:**
+    ```
+    illustrative dragon, woodcut style, fantasy creature, powerful, majestic, clean lines, detailed but not cluttered, black and white, transparent background
+    ```
+*   **Negative Prompt:**
+    ```
+    blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, color, photo, 3d render, shadow, human, signature, watermark, cartoon, cute
+    ```
+
+---
+### Pillar: Reader Life
+
+---
+**Design 4: The "Fictional Characters" Design**
+
+*   **Concept:** A design that focuses on the emotional attachment to fictional characters. This is typically a text-based design with a strong, relatable quote.
+*   **Positive Prompt:**
+    ```
+    "Emotionally Attached to Fictional Characters" text-based design, elegant and slightly distressed font, clean lines, simple, vector art, black and white, transparent background
+    ```
+*   **Negative Prompt:**
+    ```
+    blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, signature, watermark
+    ```
+
+---
+**Design 5: The "One More Chapter" Design**
+
+*   **Concept:** A design that captures the feeling of being unable to put a book down. This could be a visual representation (like a clock with book-related symbols) or a text-based design.
+*   **Positive Prompt (Visual):**
+    ```
+    minimalist clock with book-related symbols instead of numbers, "Just One More Chapter" theme, clean lines, vector art, simple, elegant, black and white, transparent background
+    ```
+*   **Positive Prompt (Text):**
+    ```
+    "Just One More Chapter" text-based design, sleepy, whimsical font, clean lines, simple, vector art, black and white, transparent background
+    ```
+*   **Negative Prompt:**
+    ```
+    blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, signature, watermark
+    ```

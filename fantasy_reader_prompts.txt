@@ -1,0 +1,44 @@
+---
+Design 1: The Open Book & Tree of Life
+
+Positive Prompt:
+minimalist open book, tree of life growing from pages, intricate roots, delicate branches, subtle glow, fantasy literature symbol, clean lines, vector art, simple, elegant, black and white, transparent background
+
+Negative Prompt:
+text, words, letters, blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, signature, watermark
+
+---
+Design 2: The Dragon's Eye
+
+Positive Prompt:
+minimalist dragon eye, slit pupil, subtle scales texture, glowing iris, mysterious, powerful, fantasy creature symbol, clean lines, vector art, simple, elegant, black and white, transparent background
+
+Negative Prompt:
+blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, full dragon, body, signature, watermark, cartoon, cute
+
+---
+Design 3: The Magic Rune/Glyph
+
+Positive Prompt:
+minimalist magic rune, ancient glyph, mystical symbol, glowing edges, arcane, powerful, fantasy magic, clean lines, geometric, elegant, black and white, transparent background
+
+Negative Prompt:
+text, words, letters, blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, signature, watermark, real alphabet, recognizable letters
+
+---
+Design 4: The Sword & Quill
+
+Positive Prompt:
+minimalist crossed sword and quill, adventure and storytelling symbol, fantasy writer, epic journey, clean lines, elegant, simple, black and white, transparent background
+
+Negative Prompt:
+blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, signature, watermark, blood, violence
+
+---
+Design 5: The Potion Bottle
+
+Positive Prompt:
+minimalist potion bottle, subtle glow, magical elixir, fantasy quest item, healing, arcane, clean lines, simple, elegant, black and white, transparent background
+
+Negative Prompt:
+text, words, letters, label, blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, signature, watermark, skull, poison

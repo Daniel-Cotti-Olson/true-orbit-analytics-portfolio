@@ -1,0 +1,68 @@
+### T-Shirt Design & Prompt Guide
+
+Here is a guide to help you create new, best-selling t-shirt designs.
+
+### Analysis of Your Current Design
+
+Your current prompt, "A majestic wolf howling at a geometric moon, vintage, distressed texture, t-shirt graphic design, vector, single color, transparent background," is excellent. It aligns perfectly with two major trends: **Vintage/Retro** aesthetics and **Nature/Animal** themes. The "vector" and "single color" keywords are ideal for creating clean, print-ready graphics.
+
+### Front vs. Back Placement: What Sells Best?
+
+Regarding image placement, you have two strong options that are popular in the market:
+
+1.  **Front Only (The Classic):** This is the most common and timeless approach. A single, well-placed design on the front of the shirt is a guaranteed winner and appeals to the broadest audience.
+2.  **Large Back Graphic + Small Front Graphic (The Trend):** A very popular modern style is to feature a large, bold, or intricate design covering most of the back of the shirt. This is often paired with a small, simple logo or a small element from the main design on the front, typically over the left chest area.
+
+**Recommendation:** Avoid placing the same large graphic on both the front and back, as it can be visually overwhelming and is not a common design practice. For a start, focusing on strong, single front-prints is most efficient.
+
+---
+
+### Prompt Guide for Best-Selling T-Shirt Designs
+
+Here are three alternative design prompts based on current best-sellers. You can copy and paste these directly into the positive and negative prompt fields in your workflow.
+
+#### Design 1: Minimalist Line Art
+
+This style is clean, modern, and very popular. It relies on simple, elegant lines to create a striking image.
+
+**Positive Prompt:**
+```
+Minimalist mountain range at sunrise, single continuous line drawing, clean vector art, elegant and simple, t-shirt graphic design, transparent background
+```
+
+**Negative Prompt:**
+```
+blurry, photo, realistic, 3d, shadow, complex, detailed, watermark, signature, multi-color, shading
+```
+
+---
+
+#### Design 2: Mystical Tarot Card
+
+The "cosmic" and "mystical" trend is very strong. Tarot card designs are a proven niche within this trend.
+
+**Positive Prompt:**
+```
+The Sun Tarot Card, art nouveau style, beautiful woman with flowing hair, intricate floral border, radiant sun with a face, clean lines, detailed illustration, screen print design, t-shirt graphic
+```
+
+**Negative Prompt:**
+```
+blurry, watermark, ugly, tiling, poorly drawn, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face, photo, realistic, 3d, shadow
+```
+
+---
+
+#### Design 3: Whimsical Hand-Drawn Nature
+
+This combines the "cute animal" and "hand-drawn/doodle" trends. These designs feel personal and are very popular on platforms like Etsy.
+
+**Positive Prompt:**
+```
+whimsical raccoon wearing a flower crown, cute storybook illustration, simple hand-drawn style, soft pastel colors, clean lines, t-shirt graphic design, transparent background
+```
+
+**Negative Prompt:**
+```
+blurry, watermark, ugly, tiling, poorly drawn, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face, photo, realistic, 3d, shadow, complex, scary
+```

@@ -1,0 +1,280 @@
+{
+  "last_node_id": 20,
+  "last_link_id": 25,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [10, 10],
+      "size": [315, 98],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        { "name": "MODEL", "type": "MODEL", "links": [1], "slot_index": 0 },
+        { "name": "CLIP", "type": "CLIP", "links": [2, 3], "slot_index": 1 },
+        { "name": "VAE", "type": "VAE", "links": [15], "slot_index": 2 }
+      ],
+      "properties": { "Node name for S&R": "CheckpointLoaderSimple" },
+      "widgets_values": ["juggernaut_xl_v9.safetensors"]
+    },
+    {
+      "id": 2,
+      "type": "CLIPTextEncode",
+      "pos": [400, 10],
+      "size": [422, 164],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        { "name": "clip", "type": "CLIP", "link": 2 }
+      ],
+      "outputs": [
+        { "name": "CONDITIONING", "type": "CONDITIONING", "links": [18], "slot_index": 0 }
+      ],
+      "title": "Positive Prompt",
+      "properties": { "Node name for S&R": "CLIPTextEncode" },
+      "widgets_values": ["photorealistic, highly detailed, sharp focus, 8k, ultra-realistic, DSLR quality, natural lighting, real skin texture, lifelike, masterpiece, realistic photography"]
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "pos": [400, 200],
+      "size": [422, 164],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        { "name": "clip", "type": "CLIP", "link": 3 }
+      ],
+      "outputs": [
+        { "name": "CONDITIONING", "type": "CONDITIONING", "links": [6], "slot_index": 0 }
+      ],
+      "title": "Negative Prompt",
+      "properties": { "Node name for S&R": "CLIPTextEncode" },
+      "widgets_values": ["painting, drawing, illustration, cartoon, anime, sketchy, low quality, blurry, watermark, signature, deformed, noisy, grainy, abstract, unrealistic, plastic texture"]
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [10, 250],
+      "size": [315, 314],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        { "name": "IMAGE", "type": "IMAGE", "links": [7, 21], "slot_index": 0 },
+        { "name": "MASK", "type": "MASK", "links": null }
+      ],
+      "properties": { "Node name for S&R": "LoadImage" },
+      "widgets_values": ["example_painting.png", "image"]
+    },
+    {
+      "id": 5,
+      "type": "VAEEncode",
+      "pos": [400, 450],
+      "size": [210, 46],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        { "name": "pixels", "type": "IMAGE", "link": 7 },
+        { "name": "vae", "type": "VAE", "link": 16 }
+      ],
+      "outputs": [
+        { "name": "LATENT", "type": "LATENT", "links": [8], "slot_index": 0 }
+      ],
+      "properties": { "Node name for S&R": "VAEEncode" }
+    },
+    {
+      "id": 6,
+      "type": "KSampler",
+      "pos": [900, 10],
+      "size": [315, 474],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        { "name": "model", "type": "MODEL", "link": 1 },
+        { "name": "positive", "type": "CONDITIONING", "link": 19 },
+        { "name": "negative", "type": "CONDITIONING", "link": 6 },
+        { "name": "latent_image", "type": "LATENT", "link": 8 }
+      ],
+      "outputs": [
+        { "name": "LATENT", "type": "LATENT", "links": [9], "slot_index": 0 }
+      ],
+      "properties": { "Node name for S&R": "KSampler" },
+      "widgets_values": [
+        684234567,
+        "randomize",
+        30,
+        7.5,
+        "dpmpp_2m_sde",
+        "karras",
+        0.5
+      ]
+    },
+    {
+      "id": 7,
+      "type": "VAEDecode",
+      "pos": [1250, 10],
+      "size": [210, 46],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        { "name": "samples", "type": "LATENT", "link": 9 },
+        { "name": "vae", "type": "VAE", "link": 16 }
+      ],
+      "outputs": [
+        { "name": "IMAGE", "type": "IMAGE", "links": [10], "slot_index": 0 }
+      ],
+      "properties": { "Node name for S&R": "VAEDecode" }
+    },
+    {
+      "id": 8,
+      "type": "SaveImage",
+      "pos": [1500, 10],
+      "size": [315, 270],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        { "name": "images", "type": "IMAGE", "link": 10 }
+      ],
+      "properties": { "Node name for S&R": "SaveImage" },
+      "widgets_values": ["ComfyUI_Advanced_Realism"]
+    },
+    {
+      "id": 10,
+      "type": "ControlNetLoader",
+      "pos": [10, 600],
+      "size": [315, 58],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        { "name": "CONTROL_NET", "type": "CONTROL_NET", "links": [20], "slot_index": 0 }
+      ],
+      "properties": { "Node name for S&R": "ControlNetLoader" },
+      "widgets_values": ["controlnet-xl-depth.safetensors"]
+    },
+    {
+      "id": 11,
+      "type": "ControlNetApply",
+      "pos": [600, 600],
+      "size": [315, 98],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        { "name": "conditioning", "type": "CONDITIONING", "link": 18 },
+        { "name": "control_net", "type": "CONTROL_NET", "link": 20 },
+        { "name": "image", "type": "IMAGE", "link": 22 }
+      ],
+      "outputs": [
+        { "name": "CONDITIONING", "type": "CONDITIONING", "links": [19], "slot_index": 0 }
+      ],
+      "properties": { "Node name for S&R": "ControlNetApply" },
+      "widgets_values": [1.0]
+    },
+    {
+      "id": 12,
+      "type": "VAELoader",
+      "pos": [10, 150],
+      "size": [315, 58],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        { "name": "VAE", "type": "VAE", "links": [16], "slot_index": 0 }
+      ],
+      "properties": { "Node name for S&R": "VAELoader" },
+      "widgets_values": ["sdxl_vae.safetensors"]
+    },
+    {
+      "id": 13,
+      "type": "UpscaleModelLoader",
+      "pos": [1250, 150],
+      "size": [315, 58],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        { "name": "UPSCALE_MODEL", "type": "UPSCALE_MODEL", "links": [23], "slot_index": 0 }
+      ],
+      "properties": { "Node name for S&R": "UpscaleModelLoader" },
+      "widgets_values": ["4x-UltraSharp.pth"]
+    },
+    {
+      "id": 14,
+      "type": "ImageUpscaleWithModel",
+      "pos": [1500, 300],
+      "size": [315, 46],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        { "name": "upscale_model", "type": "UPSCALE_MODEL", "link": 23 },
+        { "name": "image", "type": "IMAGE", "link": 10 }
+      ],
+      "outputs": [
+        { "name": "IMAGE", "type": "IMAGE", "links": [24], "slot_index": 0 }
+      ],
+      "properties": { "Node name for S&R": "ImageUpscaleWithModel" }
+    },
+    {
+      "id": 15,
+      "type": "SaveImage",
+      "pos": [1850, 300],
+      "size": [315, 270],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        { "name": "images", "type": "IMAGE", "link": 24 }
+      ],
+      "properties": { "Node name for S&R": "SaveImage" },
+      "widgets_values": ["ComfyUI_Upscaled_Realism"]
+    },
+    {
+      "id": 16,
+      "type": "Zoe-DepthMap-Preprocessor",
+      "pos": [350, 600],
+      "size": [210, 82],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        { "name": "image", "type": "IMAGE", "link": 21 }
+      ],
+      "outputs": [
+        { "name": "IMAGE", "type": "IMAGE", "links": [22], "slot_index": 0 }
+      ],
+      "properties": { "Node name for S&R": "Zoe-DepthMap-Preprocessor" }
+    }
+  ],
+  "links": [
+    [1, 1, 0, 6, 0, "MODEL"],
+    [2, 1, 1, 2, 0, "CLIP"],
+    [3, 1, 1, 3, 0, "CLIP"],
+    [6, 3, 0, 6, 2, "CONDITIONING"],
+    [7, 4, 0, 5, 0, "IMAGE"],
+    [8, 5, 0, 6, 3, "LATENT"],
+    [9, 6, 0, 7, 0, "LATENT"],
+    [10, 7, 0, 8, 0, "IMAGE"],
+    [16, 12, 0, 5, 1, "VAE"],
+    [16, 12, 0, 7, 1, "VAE"],
+    [18, 2, 0, 11, 0, "CONDITIONING"],
+    [19, 11, 0, 6, 1, "CONDITIONING"],
+    [20, 10, 0, 11, 1, "CONTROL_NET"],
+    [21, 4, 0, 16, 0, "IMAGE"],
+    [22, 16, 0, 11, 2, "IMAGE"],
+    [23, 13, 0, 14, 0, "UPSCALE_MODEL"],
+    [24, 14, 0, 15, 0, "IMAGE"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

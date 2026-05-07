@@ -1,0 +1,36 @@
+<svg width="2560" height="1440" viewBox="0 0 2560 1440" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="2560" height="1440" fill="#222222"/>
+    <rect width="2560" height="1440" fill="url(#noise)" />
+
+    <!-- Safe Area Content (1546x423, centered) -->
+    <g transform="translate(507, 508.5)">
+        <!-- Channel Name -->
+        <text x="773" y="180" font-family="'Courier New', Courier, monospace" font-size="80" fill="white" text-anchor="middle">They Move in Darkness</text>
+
+        <!-- Logo (re-integrated from logo_concept_1.svg) -->
+        <g transform="translate(688, 220) scale(0.8)">
+            <path d="M32 49.3125V156C32 159.314 34.6863 162 38 162H162C165.314 162 168 159.314 168 156V64.3125C168 61 165.314 58.3125 162 58.3125H108.8C106.319 58.3125 104.053 57.3434 102.343 55.6337L99.6569 52.9475C97.9472 51.2378 95.6815 50.2688 93.2 50.2688H80H42C36.4772 50.2688 32 45.7916 32 40.2688V40.2688C32 36.9551 34.6863 34.2688 38 34.2688H93.2C94.4406 34.2688 95.6579 34.7533 96.561 35.6563L102.039 41.1342C102.942 42.0373 104.159 42.5217 105.4 42.5217H162C169.732 42.5217 176 48.7895 176 56.5217V156C176 163.732 169.732 170 162 170H38C30.268 170 24 163.732 24 156V49.3125C24 45.9988 26.6863 43.3125 30 43.3125H32V49.3125Z" fill="white"/>
+            <rect x="50" y="100" width="100" height="15" fill="#222222"/>
+        </g>
+
+        <!-- Decorative elements -->
+        <path d="M200 150 L 500 300" stroke="#555555" stroke-width="2"/>
+        <path d="M1000 100 L 1300 250" stroke="#555555" stroke-width="2"/>
+        <rect x="950" y="280" width="200" height="20" fill="#FF5555" opacity="0.3"/>
+    </g>
+
+    <defs>
+        <filter id="noiseFilter">
+            <feTurbulence 
+                type="fractalNoise" 
+                baseFrequency="0.8" 
+                numOctaves="3" 
+                stitchTiles="stitch"/>
+        </filter>
+        <pattern id="noise" patternUnits="userSpaceOnUse" width="200" height="200">
+            <rect width="200" height="200" fill="#222222"></rect>
+            <rect width="200" height="200" filter="url(#noiseFilter)" opacity="0.1"></rect>
+        </pattern>
+    </defs>
+</svg>

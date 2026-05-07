@@ -1,0 +1,64 @@
+{
+    "name": "T-Shirt Workflow (1024x1536)",
+    "nodes": [
+        {
+            "id": 1,
+            "type": "CheckpointLoaderSimple",
+            "properties": {},
+            "widgets_values": ["v1-5-pruned-emaonly.safetensors"]
+        },
+        {
+            "id": 2,
+            "type": "CLIPTextEncode",
+            "properties": {},
+            "widgets_values": ["A majestic wolf howling at a geometric moon, vintage, distressed texture, t-shirt graphic design, vector, single color, transparent background"]
+        },
+        {
+            "id": 3,
+            "type": "CLIPTextEncode",
+            "properties": {},
+            "widgets_values": ["blurry, watermark, ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face, photo, realistic"]
+        },
+        {
+            "id": 4,
+            "type": "EmptyLatentImage",
+            "properties": {},
+            "widgets_values": [1024, 1536, 1]
+        },
+        {
+            "id": 5,
+            "type": "KSampler",
+            "properties": {},
+            "widgets_values": [123, "randomize", 25, 8, "euler", "normal", 1]
+        },
+        {
+            "id": 6,
+            "type": "VAEDecode",
+            "properties": {}
+        },
+        {
+            "id": 8,
+            "type": "ImageScale",
+            "properties": {},
+            "widgets_values": ["lanczos", 2048, 3072, "disabled"]
+        },
+        {
+            "id": 7,
+            "type": "SaveImage",
+            "properties": {},
+            "widgets_values": ["T-Shirts/VintageWolf"]
+        }
+    ],
+    "links": [
+        [1, 1, 2, 0],
+        [1, 1, 3, 0],
+        [1, 0, 5, 0],
+        [1, 2, 6, 1],
+        [2, 0, 5, 1],
+        [3, 0, 5, 2],
+        [4, 0, 5, 3],
+        [5, 0, 6, 0],
+        [6, 0, 8, 0],
+        [8, 0, 7, 0]
+    ]
+}

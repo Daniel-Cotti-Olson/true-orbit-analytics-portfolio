@@ -1,0 +1,49 @@
+---
+A Note on Hat Designs:
+
+Designs for hats, especially embroidered hats, need to be simple, bold, and easily recognizable from a distance. Complex details will be lost. The best hat designs are often single, strong symbols.
+
+---
+Design 1: The Sorcerer's Hat
+
+Positive Prompt:
+minimalist sorcerer's hat, fantasy wizard, arcane symbol, clean lines, vector art, simple, bold, iconic, black and white, transparent background
+
+Negative Prompt:
+blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, face, text, words
+
+---
+Design 2: The Dwarven Axe
+
+Positive Prompt:
+minimalist dwarven axe, fantasy weapon, geometric patterns, clean lines, vector art, simple, bold, iconic, black and white, transparent background
+
+Negative Prompt:
+blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, text, words, blood
+
+---
+Design 3: The Elven Leaf
+
+Positive Prompt:
+minimalist elven leaf, fantasy nature symbol, elegant curves, clean lines, vector art, simple, bold, iconic, black and white, transparent background
+
+Negative Prompt:
+blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, text, words, veins, decay
+
+---
+Design 4: The Mimic's Grin
+
+Positive Prompt:
+minimalist mimic monster grin, fantasy creature, D&D, clean lines, vector art, simple, bold, iconic, black and white, transparent background
+
+Negative Prompt:
+blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, full body, text, words
+
+---
+Design 5: The Cthulhu Silhouette
+
+Positive Prompt:
+minimalist Cthulhu silhouette, Lovecraftian horror, cosmic entity, clean lines, vector art, simple, bold, iconic, black and white, transparent background
+
+Negative Prompt:
+blurry, fuzzy, distorted, disfigured, ugly, noisy, complex, detailed, color, photo, 3d render, shadow, human, face, text, words
