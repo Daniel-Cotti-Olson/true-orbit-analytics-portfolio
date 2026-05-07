@@ -7,7 +7,6 @@ import {
   MailOpen,
   ArrowRight,
   ShieldCheck,
-  BarChart2
 } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
