@@ -919,15 +919,16 @@ export default function HomePage() {
           <button
             onClick={() => setMenuOpen(false)}
             style={{ 
-  position: "absolute", 
-  top: 24, 
-  right: 24, 
-  background: "none", 
-  border: "none", 
-  color: C.gold, 
-  cursor: "pointer",
-  padding: 12
-}}
+              position: "absolute", 
+              top: 16, 
+              right: 16, 
+              background: "none", 
+              border: "none", 
+              color: C.gold, 
+              cursor: "pointer",
+              padding: 20,
+              zIndex: 110
+            }}
           >
             <X size={28} />
           </button>
