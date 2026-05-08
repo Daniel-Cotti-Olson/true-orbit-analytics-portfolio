@@ -936,7 +936,7 @@ export default function HomePage() {
 {[320,480,640].map((size, i) => (
   <div key={i} className="hero-orbit-ring" style={{
     width: size, height: size,
-    top: "100%", left: "100%",
+    top: "200%", left: "200%",
     marginTop: -size/2, marginLeft: -size/2,
     opacity: 0.4 - i * 0.1,
   }} />
