@@ -931,19 +931,27 @@ export default function HomePage() {
 
       {/* ── HERO ────────────────────────────────────── */}
       <section id="hero" className="hero">
-        <div className="hero-bg-grid" />
         <div className="hero-glow" />
-        {/* Orbit rings */}
-        {[320,480,640].map((size, i) => (
-          <div key={i} className="hero-orbit-ring" style={{
-            width: size, height: size,
-            top: "50%", left: "50%",
-            marginTop: -size/2, marginLeft: -size/2,
-            opacity: 0.4 - i * 0.1,
-          }} />
-        ))}
+{/* Orbit rings */}
+{[320,480,640].map((size, i) => (
+  <div key={i} className="hero-orbit-ring" style={{
+    width: size, height: size,
+    top: "50%", left: "50%",
+    marginTop: -size/2, marginLeft: -size/2,
+    opacity: 0.4 - i * 0.1,
+  }} />
+))}
 
-        <p className="hero-eyebrow">True Orbit Analytics</p>
+<Image
+  src="/with_padding.png"
+  alt="True Orbit Analytics"
+  width={480}
+  height={160}
+  style={{ objectFit: "contain", marginBottom: 16, position: "relative" }}
+  priority
+/>
+
+<p className="hero-eyebrow">True Orbit Analytics</p>
         <h1 className="hero-title">
           Your Data Is<br />
           <span>Telling a Story.</span><br />
