@@ -1255,47 +1255,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           <div>
             <div className="footer-col-title">Navigation</div>
             <ul className="footer-links">
-              {["services","about","portfolio","pricing","co<form className="contact-form" onSubmit={handleSubmit}>
-  <div className="form-row">
-    <div className="form-field">
-      <label className="form-label">First Name</label>
-      <input className="form-input" type="text" name="firstName" placeholder="Jane" />
-    </div>
-    <div className="form-field">
-      <label className="form-label">Last Name</label>
-      <input className="form-input" type="text" name="lastName" placeholder="Smith" />
-    </div>
-  </div>
-  <div className="form-field">
-    <label className="form-label">Business Email</label>
-    <input className="form-input" type="email" name="email" placeholder="jane@company.com" />
-  </div>
-  <div className="form-field">
-    <label className="form-label">Service Interest</label>
-    <select className="form-select" name="service">
-      <option value="">Select a service...</option>
-      <option>Business Intelligence</option>
-      <option>Financial Analytics</option>
-      <option>Data Pipeline Architecture</option>
-      <option>Predictive Modeling</option>
-      <option>Performance Reporting</option>
-      <option>Custom Integration</option>
-    </select>
-  </div>
-  <div className="form-field">
-    <label className="form-label">Message</label>
-    <textarea
-      className="form-textarea"
-      name="message"
-      placeholder="Tell us about your data challenges and what you're trying to achieve..."
-    />
-  </div>
-  <div className="form-submit">
-    <button type="submit" className="btn-primary">
-      Send Message <ArrowRight size={16} />
-    </button>
-  </div>
-</form>ntact"].map(id => (
+              {["services","about","portfolio","pricing","contact"].map(id => (
                 <li key={id}>
                   <a onClick={() => scrollTo(id)}>
                     {id.charAt(0).toUpperCase() + id.slice(1)}
