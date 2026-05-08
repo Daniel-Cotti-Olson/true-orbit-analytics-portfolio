@@ -911,6 +911,7 @@ export default function HomePage() {
 >
   <Menu size={24} />
 </button>
+        </nav>
 
       {/* ── MOBILE MENU ─────────────────────────────── */}
       {menuOpen && (
