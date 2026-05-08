@@ -904,13 +904,13 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
-        <button className="nav-cta" onClick={() => scrollTo("contact")}>
-          Get Started
-        </button>
-        <button className="nav-hamburger" onClick={() => setMenuOpen(true)}>
-          <Menu size={24} />
-        </button>
-      </nav>
+        <button 
+  className="nav-hamburger" 
+  onClick={() => setMenuOpen(!menuOpen)}
+  style={{ visibility: menuOpen ? "hidden" : "visible" }}
+>
+  <Menu size={24} />
+</button>
 
       {/* ── MOBILE MENU ─────────────────────────────── */}
       {menuOpen && (
