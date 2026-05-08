@@ -186,7 +186,7 @@ function AnimSection({ children, delay = 0, className = "" }: {
 // ══════════════════════════════════════════════════════════════════
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+ 
 const [openCase, setOpenCase] = useState<number | null>(null);
 const [scrolled, setScrolled] = useState(false);
 const [submitted, setSubmitted] = useState(false);
