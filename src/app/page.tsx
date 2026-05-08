@@ -1081,7 +1081,7 @@ export default function HomePage() {
             </p>
           </AnimSection>
 
-          div className="portfolio-list">
+          <div className="portfolio-list">
             {portfolio.map((item, i) => (
               <AnimSection key={i} delay={i * 80}>
                 <div className={`portfolio-item${openCase === i ? " open" : ""}`}>
