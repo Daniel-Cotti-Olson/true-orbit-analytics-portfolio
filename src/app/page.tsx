@@ -926,7 +926,7 @@ export default function HomePage() {
               border: "none", 
               color: C.gold, 
               cursor: "pointer",
-              padding: 20,
+              padding: 30,
               zIndex: 110
             }}
           >
