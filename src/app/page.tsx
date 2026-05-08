@@ -186,26 +186,37 @@ function AnimSection({ children, delay = 0, className = "" }: {
 // ══════════════════════════════════════════════════════════════════
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
- 
-const [openCase, setOpenCase] = useState<number | null>(null);
-const [scrolled, setScrolled] = useState(false);
-const [submitted, setSubmitted] = useState(false);
+  const [openCase, setOpenCase] = useState<number | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  const form = e.currentTarget;
-  const data = new FormData(form);
-  const response = await fetch("/api/contact", {
-    method: "POST",
-    body: data,
-  });
-  const result = await response.json();
-  if (result.success) {
-    setSubmitted(true);
-  } else {
-    alert("Something went wrong. Please email us directly at contact@trueorbitanalytics.com");
-  }
-};
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      body: data,
+    });
+    const result = await response.json();
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      alert("Something went wrong. Please email us directly at contact@trueorbitanalytics.com");
+    }
+  };
+
   return (
     <>
       <style>{`
