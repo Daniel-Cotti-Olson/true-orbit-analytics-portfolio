@@ -918,7 +918,16 @@ export default function HomePage() {
         <div className="mobile-menu">
           <button
             onClick={() => setMenuOpen(false)}
-            style={{ position: "absolute", top: 24, right: 24, background: "none", border: "none", color: C.gold, cursor: "pointer" }}
+            style={{ 
+  position: "absolute", 
+  top: 24, 
+  right: 24, 
+  background: "none", 
+  border: "none", 
+  color: C.gold, 
+  cursor: "pointer",
+  padding: 12
+}}
           >
             <X size={28} />
           </button>
