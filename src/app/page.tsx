@@ -1240,8 +1240,56 @@ export default function HomePage() {
             </div>
 
             <AnimSection delay={200}>
-              
-            </AnimSection>
+  {submitted ? (
+    <div style={{ textAlign: "center", padding: "80px 0" }}>
+      <div style={{ fontSize: "3rem", color: C.gold, marginBottom: 16 }}>✓</div>
+      <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "2rem", color: C.text, marginBottom: 8 }}>Message Received</h3>
+      <p style={{ color: C.muted }}>We'll be in touch shortly.</p>
+    </div>
+  ) : (
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <div className="form-row">
+        <div className="form-field">
+          <label className="form-label">First Name</label>
+          <input className="form-input" type="text" name="firstName" placeholder="Jane" />
+        </div>
+        <div className="form-field">
+          <label className="form-label">Last Name</label>
+          <input className="form-input" type="text" name="lastName" placeholder="Smith" />
+        </div>
+      </div>
+      <div className="form-field">
+        <label className="form-label">Business Email</label>
+        <input className="form-input" type="email" name="email" placeholder="jane@company.com" />
+      </div>
+      <div className="form-field">
+        <label className="form-label">Service Interest</label>
+        <select className="form-select" name="service">
+          <option value="">Select a service...</option>
+          <option>Business Intelligence</option>
+          <option>Financial Analytics</option>
+          <option>Data Pipeline Architecture</option>
+          <option>Predictive Modeling</option>
+          <option>Performance Reporting</option>
+          <option>Custom Integration</option>
+        </select>
+      </div>
+      <div className="form-field">
+        <label className="form-label">Message</label>
+        <textarea
+          className="form-textarea"
+          name="message"
+          placeholder="Tell us about your data challenges and what you're trying to achieve..."
+        />
+      </div>
+      <div className="form-submit">
+        <button type="submit" className="btn-primary">
+          Send Message <ArrowRight size={16} />
+        </button>
+      </div>
+    </form>
+  )}
+</AnimSection>
           </div>
         </div>
       </section>
