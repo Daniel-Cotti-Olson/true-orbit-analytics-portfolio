@@ -186,20 +186,26 @@ function AnimSection({ children, delay = 0, className = "" }: {
 // ══════════════════════════════════════════════════════════════════
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openCase, setOpenCase] = useState<number | null>(null);
-  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+const [openCase, setOpenCase] = useState<number | null>(null);
+const [scrolled, setScrolled] = useState(false);
+const [submitted, setSubmitted] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false);
-  };
-
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const data = new FormData(form);
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    body: data,
+  });
+  const result = await response.json();
+  if (result.success) {
+    setSubmitted(true);
+  } else {
+    alert("Something went wrong. Please email us directly at contact@trueorbitanalytics.com");
+  }
+};
   return (
     <>
       <style>{`
@@ -1223,46 +1229,7 @@ export default function HomePage() {
             </div>
 
             <AnimSection delay={200}>
-              <form className="contact-form" onSubmit={e => e.preventDefault()}>
-                <div className="form-row">
-                  <div className="form-field">
-                    <label className="form-label">First Name</label>
-                    <input className="form-input" type="text" placeholder="Jane" />
-                  </div>
-                  <div className="form-field">
-                    <label className="form-label">Last Name</label>
-                    <input className="form-input" type="text" placeholder="Smith" />
-                  </div>
-                </div>
-                <div className="form-field">
-                  <label className="form-label">Business Email</label>
-                  <input className="form-input" type="email" placeholder="jane@company.com" />
-                </div>
-                <div className="form-field">
-                  <label className="form-label">Service Interest</label>
-                  <select className="form-select">
-                    <option value="">Select a service...</option>
-                    <option>Business Intelligence</option>
-                    <option>Financial Analytics</option>
-                    <option>Data Pipeline Architecture</option>
-                    <option>Predictive Modeling</option>
-                    <option>Performance Reporting</option>
-                    <option>Custom Integration</option>
-                  </select>
-                </div>
-                <div className="form-field">
-                  <label className="form-label">Message</label>
-                  <textarea
-                    className="form-textarea"
-                    placeholder="Tell us about your data challenges and what you're trying to achieve..."
-                  />
-                </div>
-                <div className="form-submit">
-                  <button type="submit" className="btn-primary">
-                    Send Message <ArrowRight size={16} />
-                  </button>
-                </div>
-              </form>
+              
             </AnimSection>
           </div>
         </div>
@@ -1288,7 +1255,47 @@ export default function HomePage() {
           <div>
             <div className="footer-col-title">Navigation</div>
             <ul className="footer-links">
-              {["services","about","portfolio","pricing","contact"].map(id => (
+              {["services","about","portfolio","pricing","co<form className="contact-form" onSubmit={handleSubmit}>
+  <div className="form-row">
+    <div className="form-field">
+      <label className="form-label">First Name</label>
+      <input className="form-input" type="text" name="firstName" placeholder="Jane" />
+    </div>
+    <div className="form-field">
+      <label className="form-label">Last Name</label>
+      <input className="form-input" type="text" name="lastName" placeholder="Smith" />
+    </div>
+  </div>
+  <div className="form-field">
+    <label className="form-label">Business Email</label>
+    <input className="form-input" type="email" name="email" placeholder="jane@company.com" />
+  </div>
+  <div className="form-field">
+    <label className="form-label">Service Interest</label>
+    <select className="form-select" name="service">
+      <option value="">Select a service...</option>
+      <option>Business Intelligence</option>
+      <option>Financial Analytics</option>
+      <option>Data Pipeline Architecture</option>
+      <option>Predictive Modeling</option>
+      <option>Performance Reporting</option>
+      <option>Custom Integration</option>
+    </select>
+  </div>
+  <div className="form-field">
+    <label className="form-label">Message</label>
+    <textarea
+      className="form-textarea"
+      name="message"
+      placeholder="Tell us about your data challenges and what you're trying to achieve..."
+    />
+  </div>
+  <div className="form-submit">
+    <button type="submit" className="btn-primary">
+      Send Message <ArrowRight size={16} />
+    </button>
+  </div>
+</form>ntact"].map(id => (
                 <li key={id}>
                   <a onClick={() => scrollTo(id)}>
                     {id.charAt(0).toUpperCase() + id.slice(1)}
