@@ -960,6 +960,27 @@ export default function HomePage() {
       {/* ── HERO ────────────────────────────────────── */}
       <section id="hero" className="hero">
         <div className="hero-glow" />
+        <div style={{
+  position: "absolute",
+  width: "66vw",
+  height: "66vw",
+  maxWidth: "800px",
+  maxHeight: "800px",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  opacity: 0.12,
+  animation: "spin-globe 20s linear infinite",
+  pointerEvents: "none",
+  zIndex: 0,
+}}>
+  <Image
+    src="/symbol.svg"
+    alt=""
+    fill
+    style={{ objectFit: "contain" }}
+  />
+</div>
 {/* Orbit rings */}
 {[320,480,640].map((size, i) => (
   <div key={i} className="hero-orbit-ring" style={{
