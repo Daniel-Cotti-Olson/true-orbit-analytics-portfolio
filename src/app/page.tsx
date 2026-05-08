@@ -880,10 +880,10 @@ export default function HomePage() {
         }
 
         /* ── Hero animation ── */
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(24px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes spin-slow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(-360deg); }
+}
         .hero-eyebrow { animation: fadeUp 0.7s ease 0.2s both; }
         .hero-title    { animation: fadeUp 0.7s ease 0.4s both; }
         .hero-sub      { animation: fadeUp 0.7s ease 0.6s both; }
@@ -970,7 +970,7 @@ export default function HomePage() {
   left: "50%",
   transform: "translate(-50%, -50%)",
   opacity: 0.12,
-  animation: "spin-globe 20s linear infinite",
+  animation: "spin-slow 20s linear infinite",
   pointerEvents: "none",
   zIndex: 0,
 }}>
