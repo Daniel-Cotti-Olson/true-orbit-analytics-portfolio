@@ -164,35 +164,20 @@ export default function HeroCanvas() {
       // ── Update & draw each track ───────────────────────────
       tracks.forEach(track => {
         // ── Advance price simulation ─────────────────────────
-        track.stepCountdown--;
-        if (track.stepCountdown <= 0) {
-          // Time for a new move
-          const isBigMove = Math.random() < 0.12;
-          const direction = isBigMove
-            ? randomSign()
-            : (track.trend + randomSign()) * 0.5 > 0 ? 1 : -1;
+        const isBigMove = Math.random() < 0.12;
+const magnitude = isBigMove
+  ? randomBetween(track.volatility * 0.6, track.volatility)
+  : randomBetween(1, track.volatility * 0.3);
 
-          const magnitude = isBigMove
-            ? randomBetween(track.volatility * 0.6, track.volatility)
-            : randomBetween(1, track.volatility * 0.3);
+track.currentValue = Math.max(
+  -65,
+  Math.min(65, track.currentValue + randomSign() * magnitude)
+);
 
-          track.targetValue = Math.max(
-            -65,
-            Math.min(65, track.currentValue + direction * magnitude)
-          );
+        track.data.shift();
+        track.data.push(track.currentValue);
 
-          // Occasionally flip trend
-          if (Math.random() < 0.15) track.trend = randomSign() as -1 | 0 | 1;
-
-          track.stepCountdown = Math.floor(randomBetween(8, 40));
-        }
-
-        // Direct move — no dampening
-track.currentValue = track.targetValue;
-
-// Scroll data left, push new point
-track.data.pop();
-track.data.unshift(track.currentValue);
+        // ── Draw ─────────────────────────────────────────────
         // ── Draw ─────────────────────────────────────────────
         const yC = track.yCenter;
         const xStep = W / (track.data.length - 1);
@@ -295,6 +280,9 @@ track.data.unshift(track.currentValue);
     };
   }, [buildTracks, seedData]);
 
+
+
+  
   return (
     <canvas
       ref={canvasRef}
