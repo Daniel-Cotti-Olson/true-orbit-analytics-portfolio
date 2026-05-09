@@ -881,8 +881,12 @@ export default function HomePage() {
 
         /* ── Hero animation ── */
         @keyframes spin-slow {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to   { transform: translate(-50%, -50%) rotate(-360deg); }
+  from { 
+    transform: translate(-50%, -50%) rotate(-15deg) rotateY(0deg); 
+  }
+  to { 
+    transform: translate(-50%, -50%) rotate(-15deg) rotateY(-360deg); 
+  }
 }
         .hero-eyebrow { animation: fadeUp 0.7s ease 0.2s both; }
         .hero-title    { animation: fadeUp 0.7s ease 0.4s both; }
