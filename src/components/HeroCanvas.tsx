@@ -187,13 +187,12 @@ export default function HeroCanvas() {
           track.stepCountdown = Math.floor(randomBetween(8, 40));
         }
 
-        // Smooth toward target
-        track.currentValue += (track.targetValue - track.currentValue) * 0.15;
+        // Direct move — no dampening
+track.currentValue = track.targetValue;
 
-        // Scroll data left, push new point
-        track.data.shift();
-        track.data.push(track.currentValue);
-
+// Scroll data left, push new point
+track.data.pop();
+track.data.unshift(track.currentValue);
         // ── Draw ─────────────────────────────────────────────
         const yC = track.yCenter;
         const xStep = W / (track.data.length - 1);
