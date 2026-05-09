@@ -308,6 +308,7 @@ export default function HomePage() {
           padding: 120px 24px 80px;
           position: relative;
           overflow: hidden;
+          perspective: 1200px;
         }
         .hero-bg-grid {
           position: absolute;
