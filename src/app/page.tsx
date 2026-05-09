@@ -893,17 +893,7 @@ export default function HomePage() {
         .hero-title    { animation: fadeUp 0.7s ease 0.4s both; }
         .hero-sub      { animation: fadeUp 0.7s ease 0.6s both; }
         .hero-actions  { animation: fadeUp 0.7s ease 0.8s both; }
-
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to   { transform: rotate(360deg); }
-        }
-        .hero-orbit-ring {
-          position: absolute;
-          border-radius: 50%;
-          border: 1px solid rgba(201,168,76,0.08);
-          pointer-events: none;
-        }
+        
       `}</style>
 
       {/* ── NAV ────────────────────────────────────── */}
@@ -965,36 +955,8 @@ export default function HomePage() {
       {/* ── HERO ────────────────────────────────────── */}
       <section id="hero" className="hero">
         <div className="hero-glow" />
-        <div style={{
-  position: "absolute",
-  width: "66vw",
-  height: "66vw",
-  maxWidth: "800px",
-  maxHeight: "800px",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  opacity: 0.12,
-  animation: "spin-slow 20s linear infinite",
-  pointerEvents: "none",
-  zIndex: 0,
-}}>
-  <Image
-    src="/symbol.svg"
-    alt=""
-    fill
-    style={{ objectFit: "contain" }}
-  />
-</div>
+        
 {/* Orbit rings */}
-{[320,480,640].map((size, i) => (
-  <div key={i} className="hero-orbit-ring" style={{
-    width: size, height: size,
-    top: "200%", left: "200%",
-    marginTop: -size/2, marginLeft: -size/2,
-    opacity: 0.4 - i * 0.1,
-  }} />
-))}
 
 <Image
   src="/noBgColor.png"
