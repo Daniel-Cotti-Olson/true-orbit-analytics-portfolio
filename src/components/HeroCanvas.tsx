@@ -53,7 +53,7 @@ export default function HeroCanvas() {
         data: Array(dataLen).fill(0),
         currentValue: 0,
         targetValue: 0,
-        volatility: 18,
+        volatility: 35,
         stepCountdown: 0,
         trend: 1,
       },
@@ -67,7 +67,7 @@ export default function HeroCanvas() {
         data: Array(dataLen).fill(0),
         currentValue: 0,
         targetValue: 0,
-        volatility: 12,
+        volatility: 25,
         stepCountdown: 0,
         trend: 0,
       },
@@ -81,7 +81,7 @@ export default function HeroCanvas() {
         data: Array(dataLen).fill(0),
         currentValue: 0,
         targetValue: 0,
-        volatility: 28,
+        volatility: 45,
         stepCountdown: 0,
         trend: -1,
       },
@@ -188,7 +188,7 @@ export default function HeroCanvas() {
         }
 
         // Smooth toward target
-        track.currentValue += (track.targetValue - track.currentValue) * 0.08;
+        track.currentValue += (track.targetValue - track.currentValue) * 0.15;
 
         // Scroll data left, push new point
         track.data.shift();
