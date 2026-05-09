@@ -1,5 +1,6 @@
 "use client";
 
+import HeroCanvas from "@/components/HeroCanvas";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import {
@@ -881,14 +882,7 @@ export default function HomePage() {
         }
 
         /* ── Hero animation ── */
-        @keyframes spin-slow {
-  from { 
-    transform: translate(-50%, -50%) rotate(-15deg) rotateX(0deg); 
-  }
-  to { 
-    transform: translate(-50%, -50%) rotate(-15deg) rotateX(-360deg); 
-  }
-}
+        
         .hero-eyebrow { animation: fadeUp 0.7s ease 0.2s both; }
         .hero-title    { animation: fadeUp 0.7s ease 0.4s both; }
         .hero-sub      { animation: fadeUp 0.7s ease 0.6s both; }
@@ -953,10 +947,10 @@ export default function HomePage() {
       )}
 
       {/* ── HERO ────────────────────────────────────── */}
-      <section id="hero" className="hero">
-        <div className="hero-glow" />
-        
-{/* Orbit rings */}
+<section id="hero" className="hero">
+  <HeroCanvas />
+  <div className="hero-bg-grid" />
+  <div className="hero-glow" />
 
 <Image
   src="/noBgColor.png"
