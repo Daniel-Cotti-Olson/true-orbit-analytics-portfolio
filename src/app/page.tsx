@@ -897,8 +897,8 @@ export default function HomePage() {
         <Image
           src="/noBgColor.png"
           alt="True Orbit Analytics"
-          width={200}
-          height={55}
+          width={400}
+          height={255}
           className="nav-logo"
           onClick={() => scrollTo("hero")}
           style={{ objectFit: "contain" }}
