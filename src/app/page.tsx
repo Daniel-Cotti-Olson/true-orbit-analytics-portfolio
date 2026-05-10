@@ -962,7 +962,13 @@ export default function HomePage() {
   <div className="hero-bg-grid" />
   <div className="hero-glow" />
 
-  <div style={{ position: "relative", zIndex: 1, width: "100%" }}>
+  <div style={{ 
+  position: "relative", 
+  zIndex: 1, 
+  width: "100%",
+  maxWidth: "100vw",
+  textAlign: "center"
+}}>
     <HeroCanvas />
     <h1 className="hero-title">
       Your Data Is<br />
