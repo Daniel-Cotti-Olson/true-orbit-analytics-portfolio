@@ -32,7 +32,7 @@ const plans = [
     features: [
       "Up to 3 data sources",
       "Monthly reporting dashboard",
-      "Power BI report (1 workspace)",
+      "BI dashboard (1 workspace)",
       "Email support",
       "Quarterly strategy call",
     ],
@@ -47,7 +47,7 @@ const plans = [
     features: [
       "Up to 10 data sources",
       "Weekly reporting dashboard",
-      "Power BI (unlimited workspaces)",
+      "BI dashboard (1 workspace)",
       "Custom KPI tracking",
       "Monthly strategy call",
       "Priority support",
@@ -100,7 +100,7 @@ const services = [
     icon: <LineChart size={28} />,
     title: "Predictive Modeling",
     desc: "Forward-looking analytics that forecast demand, flag risk, and surface opportunity before your competitors see it coming.",
-    wide: true,
+    wide: false,
   },
   {
     icon: <PieChart size={28} />,
