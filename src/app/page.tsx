@@ -951,8 +951,8 @@ export default function HomePage() {
   <Image
     src="/noBgColor.png"
     alt="True Orbit Analytics"
-    width={880}
-    height={560}
+    width={640}
+    height={213}
     style={{ objectFit: "contain" }}
     priority
   />
