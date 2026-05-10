@@ -897,8 +897,8 @@ export default function HomePage() {
         <Image
           src="/noBgColor.png"
           alt="True Orbit Analytics"
-          width={160}
-          height={44}
+          width={200}
+          height={55}
           className="nav-logo"
           onClick={() => scrollTo("hero")}
           style={{ objectFit: "contain" }}
@@ -963,23 +963,7 @@ export default function HomePage() {
       {/* ── SERVICES ────────────────────────────────── */}
       <section id="services">
      {/* ── HERO ────────────────────────────────────── */}
-      <div style={{ 
-        textAlign: "center", 
-        paddingTop: "88px", 
-        position: "relative", 
-        zIndex: 1,
-        width: "100%",
-        overflowX: "hidden"
-      }}>
-        <Image
-          src="/noBgColor.png"
-          alt="True Orbit Analytics"
-          width={640}
-          height={213}
-          style={{ objectFit: "contain", maxWidth: "90vw" }}
-          priority
-        />
-      </div>
+      
 
       <section id="hero" className="hero">
         <div className="hero-bg-grid" />
