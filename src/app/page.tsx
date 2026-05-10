@@ -957,28 +957,32 @@ export default function HomePage() {
   alt="True Orbit Analytics"
   width={480}
   height={160}
-  style={{ objectFit: "contain", marginBottom: 16, position: "relative" }}
+  style={{ objectFit: "contain", marginBottom: 48, position: "relative" }}
   priority
 />
-        
-        <h1 className="hero-title">
-          Your Data Is<br />
-          <span>Telling a Story.</span><br />
-          Are You Listening?
-        </h1>
-        <p className="hero-sub">
-          We transform raw business data into clear, actionable intelligence —
-          so you make smarter decisions, faster than your competition.
-        </p>
-        <div className="hero-actions">
-          <button className="btn-primary" onClick={() => scrollTo("contact")}>
-            Start Accelerating <ArrowRight size={16} />
-          </button>
-          <button className="btn-ghost" onClick={() => scrollTo("services")}>
-            Explore Services
-          </button>
-        </div>
-      </section>
+
+<div style={{ position: "relative", zIndex: 1 }}>
+  <HeroCanvas />
+  <h1 className="hero-title">
+    Your Data Is<br />
+    <span>Telling a Story.</span><br />
+    Are You Listening?
+  </h1>
+</div>
+
+<p className="hero-sub">
+  We transform raw business data into clear, actionable intelligence —
+  so you make smarter decisions, faster than your competition.
+</p>
+<div className="hero-actions">
+  <button className="btn-primary" onClick={() => scrollTo("contact")}>
+    Start Accelerating <ArrowRight size={16} />
+  </button>
+  <button className="btn-ghost" onClick={() => scrollTo("services")}>
+    Explore Services
+  </button>
+</div>
+</section>
 
       {/* ── STAT STRIP ──────────────────────────────── */}
       <div className="stat-strip">
