@@ -845,9 +845,10 @@ export default function HomePage() {
 
         /* ── Mobile ── */
         @media (max-width: 900px) {
-          .nav { padding: 0 24px; }
-          .nav-links, .nav-cta { display: none; }
-          .nav-hamburger { display: block; }
+  .nav { padding: 0 24px; }
+  .nav-links, .nav-cta { display: none; }
+  .nav-hamburger { display: block; }
+  .hero { padding: 40px 24px 60px; min-height: auto; }
           .mobile-menu {
             position: fixed;
             inset: 0;
@@ -947,44 +948,7 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* ── HERO ────────────────────────────────────── */}
-<div style={{ textAlign: "center", paddingTop: "120px", position: "relative", zIndex: 1 }}>
-  <Image
-    src="/noBgColor.png"
-    alt="True Orbit Analytics"
-    width={640}
-    height={213}
-    style={{ objectFit: "contain" }}
-    priority
-  />
-</div>
-
-<section id="hero" className="hero">
-  <div className="hero-bg-grid" />
-  <div className="hero-glow" />
-
-  <div style={{ position: "relative", zIndex: 1, width: "100%", minWidth: "0", textAlign: "center", padding: "0 24px" }}>
-    <HeroCanvas />
-    <h1 className="hero-title">
-      Your Data Is<br />
-      <span>Telling a Story.</span><br />
-      Are You Listening?
-    </h1>
-  </div>
-
-  <p className="hero-sub">
-    We transform raw business data into clear, actionable intelligence —
-    so you make smarter decisions, faster than your competition.
-  </p>
-  <div className="hero-actions">
-    <button className="btn-primary" onClick={() => scrollTo("contact")}>
-      Start Accelerating <ArrowRight size={16} />
-    </button>
-    <button className="btn-ghost" onClick={() => scrollTo("services")}>
-      Explore Services
-    </button>
-  </div>
-</section>
+      
 
       {/* ── STAT STRIP ──────────────────────────────── */}
       <div className="stat-strip">
@@ -998,7 +962,51 @@ export default function HomePage() {
 
       {/* ── SERVICES ────────────────────────────────── */}
       <section id="services">
-        <div className="section">
+     {/* ── HERO ────────────────────────────────────── */}
+      <div style={{ 
+        textAlign: "center", 
+        paddingTop: "88px", 
+        position: "relative", 
+        zIndex: 1,
+        width: "100%",
+        overflowX: "hidden"
+      }}>
+        <Image
+          src="/noBgColor.png"
+          alt="True Orbit Analytics"
+          width={640}
+          height={213}
+          style={{ objectFit: "contain", maxWidth: "90vw" }}
+          priority
+        />
+      </div>
+
+      <section id="hero" className="hero">
+        <div className="hero-bg-grid" />
+        <div className="hero-glow" />
+
+        <div style={{ position: "relative", zIndex: 1, width: "100%", minWidth: "0", textAlign: "center", padding: "0 24px", boxSizing: "border-box" }}>
+          <HeroCanvas />
+          <h1 className="hero-title">
+            Your Data Is<br />
+            <span>Telling a Story.</span><br />
+            Are You Listening?
+          </h1>
+        </div>
+
+        <p className="hero-sub">
+          We transform raw business data into clear, actionable intelligence —
+          so you make smarter decisions, faster than your competition.
+        </p>
+        <div className="hero-actions">
+          <button className="btn-primary" onClick={() => scrollTo("contact")}>
+            Start Accelerating <ArrowRight size={16} />
+          </button>
+          <button className="btn-ghost" onClick={() => scrollTo("services")}>
+            Explore Services
+          </button>
+        </div>
+      </section>   <div className="section">
           <AnimSection>
             <div className="section-label">What We Do</div>
             <h2 className="section-title">
