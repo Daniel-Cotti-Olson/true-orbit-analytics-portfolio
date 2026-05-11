@@ -992,7 +992,9 @@ return (
       </div>
 
 
-{/* ── CTA ── */}
+</section>
+
+      {/* ── CTA ── */}
       <section className="cta-section">
         <div className="cta-glow" />
         <AnimSection>
@@ -1014,7 +1016,7 @@ return (
         </AnimSection>
       </section>
 
-<footer className="footer">
+      <footer className="footer">
         <div className="footer-inner">
           <span>© {new Date().getFullYear()} True Orbit Analytics. All rights reserved.</span>
           <span style={{ color: C.goldDim }}>Accelerate With Analytics</span>
