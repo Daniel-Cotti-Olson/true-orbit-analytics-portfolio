@@ -78,16 +78,18 @@ const plans = [
 
 // ── Services ────────────────────────────────────────────────────
 const services = [
-  
-    {
-  icon: <TrendingUp size={28} />,
-  title: "Financial Analytics",
-  desc: "...",
-  wide: false,
-  href: "/services/financial-analytics",
-},
+  {
+    icon: <BarChart2 size={28} />,
+    title: "Business Intelligence",
+    desc: "Transform raw data into executive-ready dashboards using your preferred BI platform. See your entire operation at a glance.",
+    wide: false,
+  },
+  {
+    icon: <TrendingUp size={28} />,
+    title: "Financial Analytics",
     desc: "Deep-dive analysis of revenue, margins, cash flow, and investment performance. Make money decisions backed by math, not intuition.",
     wide: false,
+    href: "/services/financial-analytics",
   },
   {
     icon: <Database size={28} />,
