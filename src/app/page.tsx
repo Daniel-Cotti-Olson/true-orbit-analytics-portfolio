@@ -678,7 +678,15 @@ export default function HomePage() {
           background: ${C.border};
           border: 1px solid ${C.border};
           margin-top: 64px;
+          align-items: stretch;
         }
+        .pricing-grid > div {
+  display: flex;
+  flex-direction: column;
+}
+.pricing-grid > div > .pricing-card {
+  flex: 1;
+}
         .pricing-card {
           background: ${C.surface};
           padding: 40px 32px;
