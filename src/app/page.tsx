@@ -90,8 +90,7 @@ const services = [
     title: "Financial Analytics",
     desc: "Deep-dive analysis of revenue, margins, cash flow, and investment performance. Make money decisions backed by math, not intuition.",
     wide: false,
-    href: "/services/predictive-modeling",
-  },                         // ← this closing brace+comma is missing
+  },                        
   {
     icon: <Database size={28} />,
     title: "Data Pipeline Architecture",
