@@ -63,13 +63,6 @@ const problems = [
   "Presenting projections to investors or boards without statistical backing",
 ];
 
-const forWho = [
-  { label: "Operations-heavy businesses", desc: "With inventory, logistics, or workforce planning that demands accurate forward visibility" },
-  { label: "Revenue-driven growth companies", desc: "That need defensible forecasts for fundraising, board reviews, or strategic planning" },
-  { label: "Customer-facing enterprises", desc: "Seeking to predict churn, lifetime value, and next-best-action at scale" },
-  { label: "Data-mature organizations", desc: "Ready to move beyond descriptive analytics into models that actively drive decisions" },
-];
-
 const models = [
   { label: "Time-Series Forecasting", sub: "ARIMA, Prophet, ETS" },
   { label: "Classification Models", sub: "Churn, risk, segmentation" },
@@ -122,7 +115,7 @@ export default function PredictiveModelingPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollTo = (id: string) => {
+const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
@@ -141,8 +134,8 @@ return (
           -webkit-font-smoothing: antialiased;
           overflow-x: hidden;
         }
-
-/* ── Nav ── */
+        
+        /* ── Nav ── */
         .nav {
           position: fixed;
           top: 0; left: 0; right: 0;
@@ -181,7 +174,7 @@ return (
           color: ${C.gold}; cursor: pointer;
         }
 
-/* ── Mobile menu ── */
+        /* ── Mobile menu ── */
         .mobile-menu {
           display: none;
           position: fixed; inset: 0; z-index: 99;
@@ -189,8 +182,7 @@ return (
           flex-direction: column; align-items: center; justify-content: center;
           gap: 32px;
         }
-
-.mobile-menu.open { display: flex; }
+        .mobile-menu.open { display: flex; }
         .mobile-menu a {
           font-size: 22px; font-weight: 500;
           letter-spacing: 0.06em; text-transform: uppercase;
@@ -199,7 +191,7 @@ return (
         }
         .mobile-menu a:hover { color: ${C.gold}; }
 
-/* ── Hero ── */
+        /* ── Hero ── */
         .hero {
           min-height: 100vh;
           display: flex; flex-direction: column;
@@ -241,7 +233,7 @@ return (
           100% { opacity: 0;   transform: translate(-50%,-50%) scale(1.06); }
         }
 
-.breadcrumb {
+        .breadcrumb {
           font-size: 11px; font-weight: 600;
           letter-spacing: 0.2em; text-transform: uppercase;
           color: ${C.dim}; margin-bottom: 24px;
@@ -252,13 +244,14 @@ return (
         .breadcrumb a:hover { color: ${C.gold}; }
         .breadcrumb-sep { color: ${C.goldDim}; }
 
-.hero-eyebrow {
+        .hero-eyebrow {
           font-size: 11px; font-weight: 600;
           letter-spacing: 0.25em; text-transform: uppercase;
           color: ${C.gold}; margin-bottom: 20px;
           display: flex; align-items: center; gap: 10px;
           justify-content: center; position: relative;
         }
+
         .hero-eyebrow::before, .hero-eyebrow::after {
           content: ''; display: block; width: 40px; height: 1px;
           background: ${C.goldDim};
@@ -304,7 +297,7 @@ return (
         }
         .btn-secondary:hover { border-color: ${C.gold}; color: ${C.gold}; }
 
-/* ── Stat strip ── */
+        /* ── Stat strip ── */
         .stat-strip {
           border-top: 1px solid ${C.border};
           border-bottom: 1px solid ${C.border};
@@ -334,7 +327,7 @@ return (
           color: ${C.dim};
         }
 
-/* ── Shared section ── */
+        /* ── Shared section ── */
         .section {
           max-width: 1100px; margin: 0 auto;
           padding: 100px 48px;
@@ -362,7 +355,7 @@ return (
           margin-bottom: 56px;
         }
 
-/* ── Problem section ── */
+        /* ── Problem section ── */
         .problem-section {
           background: ${C.surface};
           border-top: 1px solid ${C.border};
@@ -410,7 +403,7 @@ return (
           font-size: 0.95rem; color: ${C.muted}; line-height: 1.75;
         }
 
-/* ── Deliverables grid ── */
+        /* ── Deliverables grid ── */
         .deliverables-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -438,7 +431,7 @@ return (
           font-size: 0.875rem; color: ${C.muted}; line-height: 1.65;
         }
 
-/* ── Model tags ── */
+        /* ── Model tags ── */
         .models-section {
           background: ${C.surface};
           border-top: 1px solid ${C.border};
@@ -479,7 +472,7 @@ return (
           border-radius: 1px;
         }
 
-/* ── Methodology steps ── */
+        /* ── Methodology steps ── */
         .methodology-section {
           background: ${C.bg};
           padding: 100px 0;
@@ -517,7 +510,7 @@ return (
           font-size: 0.9rem; color: ${C.muted}; line-height: 1.7;
         }
 
-/* ── For who ── */
+        /* ── For who ── */
         .for-who-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -538,7 +531,7 @@ return (
         }
         .for-who-desc { font-size: 0.875rem; color: ${C.muted}; line-height: 1.6; }
 
-/* ── Case study ── */
+        /* ── Case study ── */
         .case-study {
           background: ${C.surface};
           border-top: 1px solid ${C.border};
@@ -599,7 +592,7 @@ return (
           color: ${C.dim};
         }
 
-/* ── CTA section ── */
+        /* ── CTA section ── */
         .cta-section {
           text-align: center;
           padding: 120px 48px;
@@ -626,21 +619,14 @@ return (
           line-height: 1.75; position: relative;
         }
 
-/* ── Footer ── */
+        /* ── Footer ── */
         .footer {
           background: ${C.surface};
           border-top: 1px solid ${C.border};
           padding: 28px 48px;
         }
-        .footer-inner {
-          max-width: 1100px; margin: 0 auto;
-          display: flex; justify-content: space-between;
-          align-items: center;
-          font-size: 12px; color: ${C.dim};
-          letter-spacing: 0.05em;
-        }
 
-/* ── Responsive ── */
+        /* ── Responsive ── */
         @media (max-width: 900px) {
           .nav { padding: 0 24px; }
           .nav-links, .nav-cta { display: none; }
@@ -661,6 +647,7 @@ return (
           .footer { padding: 24px; }
           .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
         }
+
         @media (max-width: 600px) {
           .models-grid { grid-template-columns: 1fr; }
           .hero-ctas { flex-direction: column; align-items: center; }
@@ -668,7 +655,7 @@ return (
         }
       `}</style>
 
-{/* ── NAV ── */}
+      {/* ── NAV ── */}
       <nav className={`nav${scrolled ? " scrolled" : ""}`}>
         <Link href="/">
           <Image
@@ -696,7 +683,7 @@ return (
         </button>
       </nav>
 
-{/* ── MOBILE MENU ── */}
+      {/* ── MOBILE MENU ── */}
       <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
         <button
           onClick={() => setMenuOpen(false)}
@@ -711,7 +698,7 @@ return (
         ))}
       </div>
 
-{/* ── HERO ── */}
+      {/* ── HERO ── */}
       <section className="hero">
         <div className="hero-grid" />
         <div className="hero-glow" />
@@ -719,7 +706,7 @@ return (
         <div className="hero-pulse" />
         <div className="hero-pulse" />
 
-<AnimSection>
+        <AnimSection>
           <div className="breadcrumb">
             <a href="/">Home</a>
             <span className="breadcrumb-sep">›</span>
@@ -748,7 +735,7 @@ return (
         </AnimSection>
       </section>
 
-{/* ── STAT STRIP ── */}
+      {/* ── STAT STRIP ── */}
       <div className="stat-strip">
         {[
           { value: "30–90", label: "Day Forward Visibility" },
@@ -763,7 +750,7 @@ return (
         ))}
       </div>
 
-{/* ── PROBLEM ── */}
+      {/* ── PROBLEM ── */}
       <section className="problem-section">
         <div className="section">
           <div className="problem-grid">
@@ -793,7 +780,7 @@ return (
               </div>
             </div>
 
-<AnimSection delay={150}>
+            <AnimSection delay={150}>
               <div className="solution-box">
                 <div className="section-label" style={{ marginBottom: 16 }}>The Solution</div>
                 <div className="solution-title">
@@ -817,7 +804,7 @@ return (
         </div>
       </section>
 
-{/* ── DELIVERABLES ── */}
+      {/* ── DELIVERABLES ── */}
       <section id="deliverables">
         <div className="section">
           <AnimSection>
@@ -832,7 +819,19 @@ return (
             </p>
           </AnimSection>
 
-{/* ── MODEL TYPES ── */}
+          <div className="deliverables-grid">
+            {deliverables.map((d, i) => (
+              <AnimSection key={i} delay={i * 60} className="deliverable-cell">
+                <div className="deliverable-icon">{d.icon}</div>
+                <div className="deliverable-title">{d.title}</div>
+                <div className="deliverable-desc">{d.desc}</div>
+              </AnimSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MODEL TYPES ── */}
       <section className="models-section">
         <div className="section">
           <AnimSection>
@@ -847,7 +846,7 @@ return (
             </p>
           </AnimSection>
 
-<div className="models-grid">
+          <div className="models-grid">
             {models.map((m, i) => (
               <AnimSection key={i} delay={i * 60}>
                 <div className="model-tag">
@@ -861,7 +860,7 @@ return (
         </div>
       </section>
 
-{/* ── METHODOLOGY ── */}
+      {/* ── METHODOLOGY ── */}
       <div className="methodology-section">
         <div className="section" style={{ padding: "0 48px" }}>
           <AnimSection>
@@ -875,7 +874,7 @@ return (
             </p>
           </AnimSection>
 
-<div className="steps">
+          <div className="steps">
             {[
               {
                 n: "01",
@@ -912,7 +911,7 @@ return (
         </div>
       </div>
 
-{/* ── FOR WHO ── */}
+      {/* ── FOR WHO ── */}
       <section>
         <div className="section">
           <AnimSection>
@@ -926,7 +925,7 @@ return (
             </p>
           </AnimSection>
 
-<div className="for-who-grid">
+          <div className="for-who-grid">
             {forWho.map((item, i) => (
               <AnimSection key={i} delay={i * 80}>
                 <div className="for-who-card">
@@ -942,7 +941,7 @@ return (
         </div>
       </section>
 
-{/* ── CASE STUDY ── */}
+      {/* ── CASE STUDY ── */}
       <div className="case-study">
         <div className="case-study-inner">
           <AnimSection>
@@ -974,7 +973,7 @@ return (
             </div>
           </AnimSection>
 
-<AnimSection delay={200}>
+          <AnimSection delay={200}>
             <div className="case-stats">
               {[
                 { value: "5+", label: "Years of Model-Driven Applied Experience" },
@@ -1013,6 +1012,7 @@ return (
         </AnimSection>
       </section>
 
+      {/* ── FOOTER ── */}
       <footer className="footer">
         <div className="footer-inner">
           <span>© {new Date().getFullYear()} True Orbit Analytics. All rights reserved.</span>
