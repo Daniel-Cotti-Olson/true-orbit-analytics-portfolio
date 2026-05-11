@@ -63,6 +63,13 @@ const problems = [
   "Presenting projections to investors or boards without statistical backing",
 ];
 
+const forWho = [
+  { label: "Operations-heavy businesses", desc: "With inventory, logistics, or workforce planning that demands accurate forward visibility" },
+  { label: "Revenue-driven growth companies", desc: "That need defensible forecasts for fundraising, board reviews, or strategic planning" },
+  { label: "Customer-facing enterprises", desc: "Seeking to predict churn, lifetime value, and next-best-action at scale" },
+  { label: "Data-mature organizations", desc: "Ready to move beyond descriptive analytics into models that actively drive decisions" },
+];
+
 const models = [
   { label: "Time-Series Forecasting", sub: "ARIMA, Prophet, ETS" },
   { label: "Classification Models", sub: "Churn, risk, segmentation" },
