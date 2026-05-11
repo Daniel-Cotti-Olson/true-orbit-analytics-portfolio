@@ -87,6 +87,13 @@ const services = [
   {
     icon: <TrendingUp size={28} />,
     title: "Financial Analytics",
+    {
+  icon: <TrendingUp size={28} />,
+  title: "Financial Analytics",
+  desc: "...",
+  wide: false,
+  href: "/services/financial-analytics",
+},
     desc: "Deep-dive analysis of revenue, margins, cash flow, and investment performance. Make money decisions backed by math, not intuition.",
     wide: false,
   },
@@ -1003,12 +1010,14 @@ export default function HomePage() {
           </AnimSection>
 
           <div className="bento-grid">
-            {services.map((s, i) => (
-              <AnimSection key={i} delay={i * 80} className={`bento-cell${s.wide ? " wide" : ""}`}>
+  {services.map((s, i) => (
+    <a key={i} href={s.href || "#"} style={{ textDecoration: "none", display: "contents" }}>
+      <AnimSection delay={i * 80} className={`bento-cell${s.wide ? " wide" : ""}`}>
                 <div className="bento-icon">{s.icon}</div>
                 <div className="bento-title">{s.title}</div>
                 <div className="bento-desc">{s.desc}</div>
               </AnimSection>
+      </a>
             ))}
           </div>
         </div>
