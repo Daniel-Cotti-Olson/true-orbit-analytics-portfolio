@@ -92,12 +92,7 @@ const services = [
     wide: false,
     href: "/services/predictive-modeling",
   },                         // ← this closing brace+comma is missing
-  {
-    icon: <PieChart size={28} />,
-    title: "Performance Reporting",
-    desc: "Clean, structured, reliable data pipelines from source to insight. Your data arrives accurate, on time, every time.",
-    wide: false,
-  },
+  
   {
     icon: <LineChart size={28} />,
     title: "Predictive Modeling",
