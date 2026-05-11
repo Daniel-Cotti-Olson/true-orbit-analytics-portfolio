@@ -96,6 +96,7 @@ const services = [
     title: "Data Pipeline Architecture",
     desc: "Clean, structured, reliable data pipelines from source to insight. Your data arrives accurate, on time, every time.",
     wide: false,
+    href: "/services/data-pipeline",
   },
   {
     icon: <LineChart size={28} />,
