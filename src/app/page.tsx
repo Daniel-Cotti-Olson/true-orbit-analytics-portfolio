@@ -78,15 +78,7 @@ const plans = [
 
 // ── Services ────────────────────────────────────────────────────
 const services = [
-  {
-    icon: <BarChart2 size={28} />,
-    title: "Business Intelligence",
-    desc: "Transform raw data into executive-ready dashboards using Power BI and leading BI platforms. See your entire operation at a glance.",
-    wide: false,
-  },
-  {
-    icon: <TrendingUp size={28} />,
-    title: "Financial Analytics",
+  
     {
   icon: <TrendingUp size={28} />,
   title: "Financial Analytics",
