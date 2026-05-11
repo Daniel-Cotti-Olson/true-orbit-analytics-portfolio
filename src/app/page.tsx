@@ -103,7 +103,7 @@ const services = [
     title: "Predictive Modeling",
     desc: "Forward-looking analytics that forecast demand, flag risk, and surface opportunity before your competitors see it coming.",
     wide: false,
-    href: "/services/predictive-modeling",
+    href: "predictive-modeling",
   },
   {
     icon: <PieChart size={28} />,
