@@ -991,9 +991,6 @@ return (
         </div>
       </div>
 
-
-</section>
-
       {/* ── CTA ── */}
       <section className="cta-section">
         <div className="cta-glow" />
