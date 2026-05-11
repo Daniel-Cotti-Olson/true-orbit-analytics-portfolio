@@ -530,6 +530,21 @@ return (
           color: ${C.text}; margin-bottom: 6px;
         }
         .for-who-desc { font-size: 0.875rem; color: ${C.muted}; line-height: 1.6; }
+        }
+        .for-who-card {
+          border: 1px solid ${C.border};
+          border-radius: 4px;
+          padding: 28px 32px;
+          background: ${C.surface};
+          display: flex; gap: 16px; align-items: flex-start;
+          transition: border-color 0.2s;
+        }
+        .for-who-card:hover { border-color: ${C.goldDim}; }
+        .for-who-label {
+          font-size: 0.95rem; font-weight: 600;
+          color: ${C.text}; margin-bottom: 6px;
+        }
+        .for-who-desc { font-size: 0.875rem; color: ${C.muted}; line-height: 1.6; }
 
         /* ── Case study ── */
         .case-study {
