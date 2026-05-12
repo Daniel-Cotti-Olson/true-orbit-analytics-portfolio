@@ -4,55 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  FileText, BarChart2, Calendar, Users, Clock,
-  CheckCircle, ArrowRight, Layers, Bell, Filter,
-  TrendingUp, Shield, Menu, X, Zap
-} from "lucide-react";
-
-const C = {
-  bg:      "#080d1a",
-  surface: "#0d1425",
-  border:  "#1a2540",
-  gold:    "#c9a84c",
-  goldLt:  "#e8c96d",
-  goldDim: "#7a5f2a",
-  text:    "#f1f5f9",
-  muted:   "#94a3b8",
-  dim:     "#475569",
-};
-
-const deliverables = [
-  {
-    icon: <BarChart2 size={22} />,
-    title: "Executive Dashboard Reports",
-    desc: "High-level performance summaries formatted for leadership consumption — clear, visual, and opinionated. Decision-ready in under five minutes of reading time.",
-  },
-  {
-    icon: <Layers size={22} />,
-    title: "Board-Level Presentation Packs",
-    desc: "Professionally structured decks that translate operational metrics into strategic narrative. The story your board needs to hear, backed by the numbers that prove it.",
-  },
-  {
-    icon: <Calendar size={22} />,
-    title: "Cadenced Delivery — Your Schedule",
-    desc: "Weekly, monthly, or quarterly — reports arrive on your chosen cadence without you chasing them. Automated delivery pipelines with zero manual effort on your end.",
-  },
-  {
-    icon: <Filter size={22} />,
-    title: "KPI Variance & Trend Analysis",
-    desc: "Every report includes a variance breakdown against prior period and target, with trend commentary that explains what moved, why it moved, and what it means.",
-  },
-  {
-    icon: <Bell size={22} />,
-    title: "Exception & Alert Reporting",
-    desc: "Out-of-threshold metrics are flagged automatically so leadership attention goes to the signals that require action — not the noise that doesn't.",
-  },
-"use client";
-
-import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import {
   LineChart, BarChart2, Activity, TrendingUp, AlertOctagon,
   CheckCircle, ArrowRight, Brain, Cpu, Target,
   Layers, Zap, Eye, Menu, X
