@@ -111,6 +111,7 @@ const services = [
     title: "Performance Reporting",
     desc: "Scheduled reporting suites delivered on your cadence — weekly, monthly, quarterly — formatted for leadership and board-level review.",
     wide: false,
+    href: "/services/performance-reporting",
   },
   {
     icon: <FileSpreadsheet size={28} />,
