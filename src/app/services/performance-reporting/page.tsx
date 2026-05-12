@@ -47,39 +47,85 @@ const deliverables = [
     title: "Exception & Alert Reporting",
     desc: "Out-of-threshold metrics are flagged automatically so leadership attention goes to the signals that require action — not the noise that doesn't.",
   },
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  LineChart, BarChart2, Activity, TrendingUp, AlertOctagon,
+  CheckCircle, ArrowRight, Brain, Cpu, Target,
+  Layers, Zap, Eye, Menu, X
+} from "lucide-react";
+
+const C = {
+  bg:      "#080d1a",
+  surface: "#0d1425",
+  border:  "#1a2540",
+  gold:    "#c9a84c",
+  goldLt:  "#e8c96d",
+  goldDim: "#7a5f2a",
+  text:    "#f1f5f9",
+  muted:   "#94a3b8",
+  dim:     "#475569",
+};
+
+const deliverables = [
   {
-    icon: <Users size={22} />,
-    title: "Department & Segment Cuts",
-    desc: "Roll-up and drill-down views across business units, product lines, or geographies. The right level of detail for every audience — from the board to the team lead.",
+    icon: <TrendingUp size={24} />,
+    title: "Demand Forecasting Models",
+    desc: "Statistical and ML-driven models that project future demand across products, services, or customer segments — so you plan inventory, staffing, and spend ahead of the curve.",
+  },
+  {
+    icon: <AlertOctagon size={24} />,
+    title: "Risk Probability Scoring",
+    desc: "Quantified risk scores for clients, suppliers, or market positions. Know the probability of churn, default, or disruption before it becomes a crisis.",
+  },
+  {
+    icon: <Eye size={24} />,
+    title: "Opportunity Surface Detection",
+    desc: "Pattern recognition across your data that surfaces untapped revenue opportunities, underperforming segments, and timing windows your competitors aren't watching.",
+  },
+  {
+    icon: <Activity size={24} />,
+    title: "Anomaly & Trend Alerts",
+    desc: "Automated detection of statistical anomalies and emerging trends in your operational data — delivered as real-time alerts before they move the needle in the wrong direction.",
+  },
+  {
+    icon: <Layers size={24} />,
+    title: "Scenario Simulation Engine",
+    desc: "Monte Carlo and sensitivity models that simulate thousands of futures based on your inputs. Stress-test decisions before committing capital or resources.",
+  },
+  {
+    icon: <Target size={24} />,
+    title: "Predictive KPI Dashboards",
+    desc: "Forward-looking dashboards that show not just where you are, but where your metrics are headed — giving leadership a 30, 60, and 90-day visibility horizon.",
   },
 ];
 
-const cadences = [
-  {
-    label: "Weekly",
-    icon: <Zap size={20} />,
-    desc: "Operational pulse reports for teams and managers. Fast, focused, and formatted for immediate action.",
-    items: ["Sales pipeline movement", "Operational throughput", "Week-over-week KPI delta", "Exception flags"],
-  },
-  {
-    label: "Monthly",
-    icon: <BarChart2 size={20} />,
-    desc: "Strategic performance review for senior leadership. Full-picture analysis with trend and variance commentary.",
-    items: ["P&L and margin review", "Departmental performance", "Target vs. actuals", "Rolling forecast update"],
-  },
-  {
-    label: "Quarterly",
-    icon: <Layers size={20} />,
-    desc: "Board-ready narrative packages. Structured for governance, investor, and lender audiences.",
-    items: ["Board pack production", "Investor-grade summaries", "Quarterly business review", "Strategic KPI assessment"],
-  },
+const problems = [
+  "Reacting to market shifts after the damage is already done",
+  "Setting revenue targets based on historical averages rather than real projections",
+  "No early warning when a key client is trending toward churn",
+  "Inventory and staffing decisions made on gut feeling rather than forecast data",
+  "Losing competitive ground to companies that see trends before they break",
+  "Presenting projections to investors or boards without statistical backing",
 ];
 
 const forWho = [
-  { label: "Leadership teams", desc: "Who need reliable performance visibility without spending hours building it themselves" },
-  { label: "Board-governed organizations", desc: "Where governance, transparency, and professional presentation are non-negotiable" },
-  { label: "Investor-backed companies", desc: "That owe regular, credible reporting to shareholders, lenders, or fund managers" },
-  { label: "Multi-department businesses", desc: "Needing standardized reporting across divisions with consistent methodology and format" },
+  { label: "Operations-heavy businesses", desc: "With inventory, logistics, or workforce planning that demands accurate forward visibility" },
+  { label: "Revenue-driven growth companies", desc: "That need defensible forecasts for fundraising, board reviews, or strategic planning" },
+  { label: "Customer-facing enterprises", desc: "Seeking to predict churn, lifetime value, and next-best-action at scale" },
+  { label: "Data-mature organizations", desc: "Ready to move beyond descriptive analytics into models that actively drive decisions" },
+];
+
+const models = [
+  { label: "Time-Series Forecasting", sub: "ARIMA, Prophet, ETS" },
+  { label: "Classification Models", sub: "Churn, risk, segmentation" },
+  { label: "Regression Analysis", sub: "Demand, pricing, revenue" },
+  { label: "Anomaly Detection", sub: "Statistical & ML-based" },
+  { label: "Monte Carlo Simulation", sub: "Scenario & sensitivity" },
+  { label: "Clustering & Segmentation", sub: "Customer & operational" },
 ];
 
 function useInView(threshold = 0.15) {
