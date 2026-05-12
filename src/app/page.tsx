@@ -90,6 +90,7 @@ const services = [
     title: "Financial Analytics",
     desc: "Deep-dive analysis of revenue, margins, cash flow, and investment performance. Make money decisions backed by math, not intuition.",
     wide: false,
+    href: "/services/financial-analytics",
   },                        
   {
     icon: <Database size={28} />,
