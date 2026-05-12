@@ -291,17 +291,6 @@ export default function DataPipelinePage() {
           border-bottom: 1px solid ${C.border};
           padding: 100px 0;
         }
-
-        /* ── Problem / Solution ── */
-        .two-col {
-          display: grid; grid-template-columns: 1fr 1fr;
-          gap: 64px; align-items: center;
-        }
-        .problem-list {
-          list-style: none;
-          display: flex; flex-direction: column; gap: 14px;
-          margin-top: 32px;
-        }
         .problem-item {
           display: flex; gap: 14px; align-items: flex-start;
           padding: 14px 20px;
@@ -469,7 +458,7 @@ export default function DataPipelinePage() {
         }
         .step-desc { font-size: 14px; color: ${C.muted}; line-height: 1.7; font-weight: 300; }
 
-        /* ── For who ── */
+        * ── For who ── */
         .for-who-grid {
           display: grid; grid-template-columns: repeat(2, 1fr);
           gap: 16px; margin-top: 48px;
@@ -686,7 +675,13 @@ export default function DataPipelinePage() {
             </AnimSection>
           </div>
 
-          {/* Sources */}
+          {/* ── Pipeline Visual ── */}
+          <AnimSection>
+            <div className="pipeline-visual">
+              <div className="pipeline-label">How Your Data Flows</div>
+              <div className="pipeline-row">
+
+                {/* Sources */}
                 <div className="pipeline-node">
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {["CRM", "ERP", "Finance", "Marketing"].map(src => (
@@ -734,7 +729,7 @@ export default function DataPipelinePage() {
 
                 <div className="pipeline-arrow" style={{ alignSelf: "center", marginBottom: 20 }} />
 
-          {/* Outputs */}
+                {/* Outputs */}
                 <div className="pipeline-node">
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {["BI Dashboards", "Reports", "Alerts", "APIs"].map(out => (
@@ -753,7 +748,7 @@ export default function DataPipelinePage() {
         </div>
       </div>
 
-    {/* ── DELIVERABLES ── */}
+      {/* ── DELIVERABLES ── */}
       <section id="deliverables">
         <div className="section">
           <AnimSection>
@@ -780,7 +775,7 @@ export default function DataPipelinePage() {
         </div>
       </section>
 
-{/* ── TECH STACK ── */}
+      {/* ── TECH STACK ── */}
       <div className="alt-section">
         <div className="section" style={{ padding: "0 48px" }}>
           <AnimSection>
@@ -808,7 +803,7 @@ export default function DataPipelinePage() {
         </div>
       </div>
 
-{/* ── METHODOLOGY ── */}
+      {/* ── METHODOLOGY ── */}
       <section>
         <div className="section">
           <AnimSection>
@@ -860,7 +855,7 @@ export default function DataPipelinePage() {
         </div>
       </section>
 
-{/* ── FOR WHO ── */}
+      {/* ── FOR WHO ── */}
       <div className="alt-section">
         <div className="section" style={{ padding: "0 48px" }}>
           <AnimSection>
@@ -890,7 +885,7 @@ export default function DataPipelinePage() {
         </div>
       </div>
 
-{/* ── CTA ── */}
+      {/* ── CTA ── */}
       <section className="cta-section">
         <div className="cta-glow" />
         <AnimSection>
@@ -910,7 +905,7 @@ export default function DataPipelinePage() {
         </AnimSection>
       </section>
 
-{/* ── FOOTER ── */}
+      {/* ── FOOTER ── */}
       <footer className="footer">
         <div className="footer-inner">
           <span>© {new Date().getFullYear()} True Orbit Analytics. All rights reserved.</span>
@@ -920,3 +915,4 @@ export default function DataPipelinePage() {
     </>
   );
 }
+        
