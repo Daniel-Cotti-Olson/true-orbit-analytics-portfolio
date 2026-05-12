@@ -630,8 +630,23 @@ export default function BusinessIntelligencePage() {
               not a generic template you have to adapt yourself.
             </p>
           </AnimSection>
-          <DeliverablesSection />
-      </section>
+          {/* ── DELIVERABLES ── */}
+<section id="deliverables">
+  <div className="section">
+    <AnimSection>
+      <div className="section-label">What You Get</div>
+      <h2 className="section-title">
+        Every Engagement<br />
+        <span>Includes</span>
+      </h2>
+      <p className="section-body">
+        A complete BI environment built around your business —
+        not a generic template you have to adapt yourself.
+      </p>
+    </AnimSection>
+    <DeliverablesSection />
+  </div>
+</section>
 
       {/* ── PLATFORMS ── */}
       <div className="alt-section">
