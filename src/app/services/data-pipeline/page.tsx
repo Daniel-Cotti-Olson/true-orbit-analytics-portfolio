@@ -1,5 +1,6 @@
 "use client";
 
+import PipelineDeliverablesSection from "@/components/PipelineDeliverablesSectionWithModals";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -763,17 +764,7 @@ export default function DataPipelinePage() {
               the moment something changes upstream.
             </p>
           </AnimSection>
-          <div className="deliverables-grid">
-            {deliverables.map((d, i) => (
-              <AnimSection key={i} delay={i * 60} className="deliverable-cell">
-                <div className="deliverable-icon">{d.icon}</div>
-                <div className="deliverable-title">{d.title}</div>
-                <div className="deliverable-desc">{d.desc}</div>
-              </AnimSection>
-            ))}
-          </div>
-        </div>
-      </section>
+          <PipelineDeliverablesSection />
 
       {/* ── TECH STACK ── */}
       <div className="alt-section">
