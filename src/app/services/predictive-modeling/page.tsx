@@ -842,7 +842,7 @@ return (
         staffing, and spend ahead of the curve.
       </p>
     </AnimSection>
-    <PredictiveDeliverablesSection />
+    <DeliverablesSection />
   </div>
 </section>
 
