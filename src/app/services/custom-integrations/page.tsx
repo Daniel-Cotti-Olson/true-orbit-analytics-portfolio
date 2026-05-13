@@ -1,6 +1,6 @@
 "use client";
 
-import DeliverablesSection from "@/components/IntegrationDeliverablesSectionqq
+import DeliverablesSection from "@/components/IntegrationDeliverablesSection",
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -827,7 +827,6 @@ export default function CustomIntegrationsPage() {
         reliably without ongoing manual intervention.
       </p>
     </AnimSection>
-
     <DeliverablesSection />
   </div>
 </section>
