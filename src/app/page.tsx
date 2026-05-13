@@ -118,6 +118,7 @@ const services = [
     title: "Custom Integrations",
     desc: "Connect your CRM, ERP, marketing stack, and financial tools into one unified analytics environment.",
     wide: false,
+    href: "/services/custom-integrations",
   },
 ];
 
