@@ -828,22 +828,23 @@ return (
       </section>
 
       {/* ── DELIVERABLES ── */}
-      <section id="deliverables">
-        <div className="section">
-          <AnimSection>
-            <div className="section-label">What You Get</div>
-            <h2 className="section-title">
-              Every Engagement<br />
-              <span>Includes</span>
-            </h2>
-            <p className="section-body">
-              Each deliverable is a working intelligence tool — not a
-              static report. Built to be used, updated, and relied upon.
-            </p>
-          </AnimSection>
-          <DeliverablesSection />
-        </div>
-      </section>
+<section id="deliverables">
+  <div className="section">
+    <AnimSection>
+      <div className="section-label">What You Get</div>
+      <h2 className="section-title">
+        Every Engagement<br />
+        <span>Includes</span>
+      </h2>
+      <p className="section-body">
+        Statistical and ML-driven models that project future demand across
+        products, services, or customer segments — so you plan inventory,
+        staffing, and spend ahead of the curve.
+      </p>
+    </AnimSection>
+    <PredictiveDeliverablesSection />
+  </div>
+</section>
 
       {/* ── MODEL TYPES ── */}
       <section className="models-section">
