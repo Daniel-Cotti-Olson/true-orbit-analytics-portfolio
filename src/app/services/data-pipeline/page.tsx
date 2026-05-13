@@ -750,22 +750,24 @@ export default function DataPipelinePage() {
       </div>
 
       {/* ── DELIVERABLES ── */}
-      <section id="deliverables">
-        <div className="section">
-          <AnimSection>
-            <div className="section-label">What You Get</div>
-            <h2 className="section-title">
-              Every Engagement<br />
-              <span>Includes</span>
-            </h2>
-            <p className="section-body">
-              A complete pipeline infrastructure built for reliability,
-              maintainability, and growth — not a fragile script that breaks
-              the moment something changes upstream.
-            </p>
-          </AnimSection>
-          <PipelineDeliverablesSection />
-
+<section id="deliverables">
+  <div className="section">
+    <AnimSection>
+      <div className="section-label">What You Get</div>
+      <h2 className="section-title">
+        Every Engagement<br />
+        <span>Includes</span>
+      </h2>
+      <p className="section-body">
+        A complete pipeline infrastructure built for reliability,
+        maintainability, and growth — not a fragile script that breaks
+        the moment something changes upstream.
+      </p>
+    </AnimSection>
+    <PipelineDeliverablesSection />
+  </div>
+</section>
+      
       {/* ── TECH STACK ── */}
       <div className="alt-section">
         <div className="section" style={{ padding: "0 48px" }}>
