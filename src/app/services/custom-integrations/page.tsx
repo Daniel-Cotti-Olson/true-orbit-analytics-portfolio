@@ -1,5 +1,6 @@
 "use client";
 
+import DeliverablesSection from "@/components/IntegrationDeliverablesSectionqq
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -812,32 +813,24 @@ export default function CustomIntegrationsPage() {
       </div>
 
       {/* ── DELIVERABLES ── */}
-      <section id="deliverables">
-        <div className="section">
-          <AnimSection>
-            <div className="section-label">What You Get</div>
-            <h2 className="section-title">
-              Every Engagement<br />
-              <span>Includes</span>
-            </h2>
-            <p className="section-body">
-              End-to-end integration work — from the first data source
-              connection to the final unified dashboard. Built to run
-              reliably without ongoing manual intervention.
-            </p>
-          </AnimSection>
+<section id="deliverables">
+  <div className="section">
+    <AnimSection>
+      <div className="section-label">What You Get</div>
+      <h2 className="section-title">
+        Every Engagement<br />
+        <span>Includes</span>
+      </h2>
+      <p className="section-body">
+        End-to-end integration work — from the first data source
+        connection to the final unified dashboard. Built to run
+        reliably without ongoing manual intervention.
+      </p>
+    </AnimSection>
 
-          <div className="deliverables-grid">
-            {deliverables.map((d, i) => (
-              <AnimSection key={i} delay={i * 60} className="deliverable-cell">
-                <div className="deliverable-icon">{d.icon}</div>
-                <div className="deliverable-title">{d.title}</div>
-                <div className="deliverable-desc">{d.desc}</div>
-              </AnimSection>
-            ))}
-          </div>
-        </div>
-      </section>
+    <DeliverablesSection />
+  </div>
+</section>
 
       {/* ── PLATFORMS ── */}
       <div className="platforms-section">
