@@ -842,7 +842,7 @@ return (
             </p>
           </AnimSection>
 
-          
+          <DeliverablesSection />
         </div>
       </section>
 
