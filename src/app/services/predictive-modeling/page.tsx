@@ -870,8 +870,9 @@ return (
                   <div className="model-bar" />
                 </div>
               </AnimSection>
-      <DeliverablesSection />
-       </div>
+          )}
+          </div>
+        </div>
       </section>
 
       {/* ── METHODOLOGY ── */}
