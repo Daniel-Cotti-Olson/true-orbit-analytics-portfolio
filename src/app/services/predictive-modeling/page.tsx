@@ -871,8 +871,7 @@ return (
                 </div>
               </AnimSection>
       <DeliverablesSection />
-          </div>
-        </div>
+       </div>
       </section>
 
       {/* ── METHODOLOGY ── */}
