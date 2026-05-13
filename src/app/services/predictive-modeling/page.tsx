@@ -841,7 +841,6 @@ return (
               static report. Built to be used, updated, and relied upon.
             </p>
           </AnimSection>
-
           <DeliverablesSection />
         </div>
       </section>
