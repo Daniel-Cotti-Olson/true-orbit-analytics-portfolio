@@ -870,7 +870,6 @@ return (
                   <div className="model-bar" />
                 </div>
               </AnimSection>
-          )}
           </div>
         </div>
       </section>
