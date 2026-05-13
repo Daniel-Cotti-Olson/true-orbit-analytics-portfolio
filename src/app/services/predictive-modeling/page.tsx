@@ -1,5 +1,6 @@
 "use client";
 
+import DeliverablesSection from "@/components/PredictiveDeliverablesSectionWithModals";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -841,15 +842,7 @@ return (
             </p>
           </AnimSection>
 
-          <div className="deliverables-grid">
-            {deliverables.map((d, i) => (
-              <AnimSection key={i} delay={i * 60} className="deliverable-cell">
-                <div className="deliverable-icon">{d.icon}</div>
-                <div className="deliverable-title">{d.title}</div>
-                <div className="deliverable-desc">{d.desc}</div>
-              </AnimSection>
-            ))}
-          </div>
+          
         </div>
       </section>
 
@@ -877,7 +870,7 @@ return (
                   <div className="model-bar" />
                 </div>
               </AnimSection>
-            ))}
+      <DeliverablesSection />
           </div>
         </div>
       </section>
