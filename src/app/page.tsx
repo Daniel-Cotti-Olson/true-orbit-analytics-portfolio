@@ -1247,16 +1247,16 @@ export default function HomePage() {
       <div className="form-row">
         <div className="form-field">
           <label className="form-label">First Name</label>
-          <input className="form-input" type="text" name="firstName" placeholder="First name." />
+          <input className="form-input" type="text" name="firstName" />
         </div>
         <div className="form-field">
           <label className="form-label">Last Name</label>
-          <input className="form-input" type="text" name="lastName" placeholder="Last name." />
+          <input className="form-input" type="text" name="lastName" />
         </div>
       </div>
       <div className="form-field">
         <label className="form-label">Business Email</label>
-        <input className="form-input" type="email" name="email" placeholder="email" />
+        <input className="form-input" type="email" name="email" />
       </div>
       <div className="form-field">
         <label className="form-label">Service Interest</label>
